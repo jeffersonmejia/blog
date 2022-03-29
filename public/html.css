@@ -38,6 +38,10 @@ main{
   font-family: 'Poppins', sans-serif;
   width:80%;
   margin:auto;
+  background-color: rgb(238, 238, 238);
+  padding: .5em;
+  margin-top:1rem;
+  border-radius: 1rem;
 }
 
 main
@@ -47,7 +51,6 @@ h1{
   margin-left:1rem;
   font-size: .875rem;
 }
-
 
 main
 section
@@ -61,7 +64,6 @@ h2{
   margin-top:.1rem;
   margin-left:1rem;
   font-size: .875rem;
-  
 }
 
 section
@@ -69,7 +71,65 @@ p{
   margin-left:1rem;
   font-size: .875rem;
   text-align: justify;
+  padding-right: 1rem;
+}
 
+table, td, th{
+  border: .1rem solid black;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+
+main
+.hashtags{
+  width:95%;
+  overflow: scroll;
+  margin:auto;
+  margin-top:.5rem;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.hashtags,
+.hashtags tr th,
+.hashtags tr td{
+  font-family: 'Poppins', sans-serif;
+  border: .01rem solid  black;
+}
+
+.hashtags
+tr
+th{
+  padding: .5rem;
+  text-align: left;
+}
+
+.hashtags
+tr
+td{
+  padding: .5rem;
+  text-align: left;
+}
+
+.hashtags
+tr
+th
+h4{
+  font-size: .875rem;
+  font-weight: bold;
+  color:black;
+}
+
+.hashtags
+tr
+td
+h5{
+  font-size: .875rem;
+  font-weight: 500;
+  color:black;
 }
 
 footer{
