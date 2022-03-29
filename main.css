@@ -4,11 +4,16 @@
   box-sizing:border-box;
 }
 
+header{
+  
+}
+
 header
 nav{
   display:flex;
   flex-direction: row-reverse;
   font-family: 'Roboto', sans-serif;
+  background-color: white;
 }
 
 nav

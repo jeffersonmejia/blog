@@ -22,7 +22,7 @@ header
 nav
 .btn{
   margin-top:1rem;
-  margin-left: .7rem;
+  margin-left: .5rem;
   font-size: .775rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -31,7 +31,7 @@ nav
 header
 nav
 .home{
-  margin-right: 1rem;
+  margin-right: .9rem;
 }
 
 main{
