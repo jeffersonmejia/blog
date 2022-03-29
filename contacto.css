@@ -1,0 +1,219 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header
+nav{
+  display:flex;
+  flex-direction: row-reverse;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav
+a{
+  text-decoration: none;
+  color:black;
+}
+
+header
+nav
+.btn{
+  margin-top:1rem;
+  margin-left: .7rem;
+  font-size: .775rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+header
+nav
+.logo{
+  margin-right: 1rem;
+}
+
+header
+nav
+.home{
+  margin-left: 4.9rem;
+}
+
+main
+h1{
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 1.275rem;
+  margin-top:.5rem;
+}
+
+main
+form{
+  width: 80%;
+  background-color: black;
+  margin:auto;
+  margin-top:.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+form
+.container{
+  padding: 1rem;
+}
+
+form
+.container
+label{
+  color:white;
+  font-family: 'Poppins', sans-serif;
+  font-size: .875rem;
+  font-weight:bold;
+}
+
+form
+.container
+input{
+  background-color: white;
+  width: 13.5rem;
+  height: 1.6rem;
+  color:black;
+  border:none;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 1rem;
+  padding-left: .6rem;
+  margin-top:.3rem;
+  margin-left:.2rem;
+  margin-bottom: 1rem;
+  font-size: .775rem;
+}
+
+form
+.container
+textarea{
+  color:black;
+  width: 13.5rem;
+  border:none;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 1rem;
+  padding-left: .6rem;
+  padding-top: .5rem;
+  margin-top:.3rem;
+  margin-left:.2rem;
+  font-size: .775rem;
+}
+
+footer{
+  background-color: black;
+  margin-top:1rem;
+  padding: 1rem;
+}
+
+footer
+p{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color:white;
+}
+
+@media screen and (min-width: 375px){
+  form
+  .container
+  input{
+    width: 16rem;
+  }
+
+  form
+  .container
+  textarea{
+    width: 16rem;
+  }
+}
+
+@media screen and (min-width:425px){
+  form
+  .container
+  input{
+    width: 18.5rem;
+  }
+
+  form
+  .container
+  textarea{
+    width: 18.5rem;
+  }
+}
+
+@media screen and (min-width: 768px){
+  main
+  form{
+    width: 50%;
+  }
+
+  form
+  .container
+  input{
+    width: 35rem;
+  }
+
+  form
+  .container
+  textarea{
+    width: 35rem;
+  }  form
+  .container
+  input{
+    width: 21.5rem;
+  }
+
+  form
+  .container
+  textarea{
+    width: 21.5rem;
+  }
+}
+
+@media screen and (min-width:1024px){
+  main
+  form{
+    width: 35%;
+    height: 100%;
+  }
+
+  form
+  .container
+  input{
+    width: 20rem;
+  }
+
+  form
+  .container
+  textarea{
+    width: 20rem;
+  } 
+  
+  
+  footer{
+    margin-top:3%;
+  }
+}
+
+@media screen and (min-width:1240px){
+  main
+  form{
+    width: 10rem;
+  } 
+
+  footer{
+    margin-top:7%;
+  }
+}
+
+@media screen and (min-width:1240px){
+  main
+  form{
+    width:23rem;
+  }
+}
