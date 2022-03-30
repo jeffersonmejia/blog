@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body{
+  position: relative;
+  padding-bottom: 5.9rem;
+}
+
 header
 nav{
   width:100%;
@@ -187,6 +192,12 @@ p{
   textarea{
     width: 21.5rem;
   }
+
+  footer{
+    position:absolute;
+    bottom: 0;
+    width:100%;
+  }
 }
 
 @media screen and (min-width:1024px){
@@ -208,10 +219,6 @@ p{
     width: 20rem;
   } 
   
-  
-  footer{
-    margin-top:3%;
-  }
 }
 
 @media screen and (min-width:1240px){
@@ -220,9 +227,7 @@ p{
     width: 10rem;
   } 
 
-  footer{
-    margin-top:7%;
-  }
+
 }
 
 @media screen and (min-width:1240px){

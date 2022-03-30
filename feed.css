@@ -4,6 +4,10 @@
   box-sizing:border-box;
 }
 
+body{
+  position:relative;
+  padding-bottom: 6rem;
+}
 
 header
 nav{
@@ -65,7 +69,7 @@ h1{
 
 main
 form{
-  width:80%;
+  width:70%;
   height: 100%;
   margin:auto;
   padding: 1rem;
@@ -77,8 +81,6 @@ form{
   flex-wrap: wrap;
   border-radius: 1rem;
   /* margin-bottom:2.5rem; */
-  margin-bottom:20%;
-  margin-top:20%;
 }
 
 form
@@ -115,6 +117,9 @@ footer{
   background-color: black;
   margin-top:1rem;
   padding: 1rem;
+  position:absolute;
+  bottom: 0;
+  width:100%;
 }
 
 footer
@@ -129,8 +134,8 @@ p{
   main
   form{
     width:50%;
-    margin-bottom:12.5%;
-    margin-top:12.5%;  
+    margin-bottom:2rem;
+    margin-top:2rem;  
   }
 }
 
@@ -139,8 +144,16 @@ p{
   main
   form{
     width:35%;
-    margin-bottom:9%;
-    margin-top:9%;
+  
+  }
+
+  footer{
+    position:absolute;
+    bottom:0;
+  }
+
+  body{
+    padding-bottom:11.17rem;
   }
 }
 
