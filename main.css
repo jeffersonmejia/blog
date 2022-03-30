@@ -11,6 +11,7 @@ nav{
   flex-direction: row-reverse;
   font-family: 'Roboto', sans-serif;
   background-color: white;
+  width:100%;
 }
 
 nav
@@ -42,33 +43,44 @@ nav
 }
 
 main
-.main-title{
+.title-container{
   height: 4rem;
-  font-family: 'Poppins', sans-serif;
   margin-top:.6rem;
   padding-top: .2rem;
-  font-size: 1.575rem;
-  text-align: left;
   margin-bottom: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
   background-color: black;
   padding: 1rem;
-  color:white;
   width:100%;
 }
 
-main
-section{
-  width: 85%;
-  padding: 1rem;
-  display:flex;
-  flex-direction: column;
-  background-color: black;
+.title-container
+.main-title{
+  text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
-  border-radius: 16px;
+  color:white;
+  font-weight: 600;
+  font-size: 1.575rem;
+  text-align: left;
+}
+
+main
+.container{
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  gap: 1.5rem;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+
+.container > .square{
+  background-color: black;
+  padding: 1rem;
+  width: 80%;
   margin:auto;
-  margin-bottom: 1rem;
+  border-radius: 16px;
+  box-shadow: .5rem .5rem .5rem gray;
+  font-family: 'Poppins', sans-serif;
 }
 
 main
@@ -154,9 +166,10 @@ p{
   }
 
   main
-  section
-  {
-    width: 50%;
+  .container{
+    width:90%;
+    flex-direction: row;
+    margin:auto;
   }
 }
 
@@ -166,6 +179,14 @@ p{
   .home{
     margin-left:48rem;
   }
+
+  main
+  .container{
+    width:80%;
+    flex-direction: row;
+    margin:auto;
+    margin-bottom:11rem;
+  }
 }
 
 @media (min-width:1200px){
@@ -174,10 +195,20 @@ p{
   .home{
     margin-left:62.5rem;
   }
+
   main
   section
   {
     width: 25%;
+  }
+
+  main
+  .container{
+    width:80%;
+    flex-direction: row;
+    margin:auto;
+    margin-top:10%;
+    margin-bottom:5.5rem;
   }
 }
 

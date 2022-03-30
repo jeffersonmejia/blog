@@ -40,8 +40,15 @@ main{
   margin:auto;
   background-color: rgb(238, 238, 238);
   padding: .5em;
-  margin-top:1rem;
+  margin-top:1.7rem;
+  margin-bottom:2rem;
   border-radius: 1rem;
+  box-shadow: 10px 10px 10px gray;
+}
+
+main
+section{
+  padding-bottom: 1.7rem;
 }
 
 main
