@@ -54,12 +54,15 @@ nav
 main
 .title-container{
   height: 4rem;
-  margin-top:.6rem;
-  padding-top: .2rem;
-  margin-bottom: 1rem;
-  background-color: black;
-  padding: 1rem;
   width:100%;
+  
+  background-color: black;
+  
+  margin-top:.6rem;
+  margin-bottom: 1rem;
+
+  padding-top: .2rem;
+  padding: 1rem;
 }
 
 .title-container

@@ -44,14 +44,22 @@ nav
 
 main
 h1{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
-  font-weight: 600;
   font-size: 1.275rem;
   margin-top:.5rem;
+
+  height: 4rem;
+  width:100%;
   text-transform: uppercase;
+
   background-color: black;
-  margin-bottom: .9rem;
+  
+  margin-top:.6rem;
+  margin-bottom: 1rem;
+
+  padding-top: .2rem;
+  padding: 1rem;
   color:white;
 }
 
