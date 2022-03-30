@@ -9,9 +9,10 @@ nav{
   display:flex;
   flex-direction: row-reverse;
   font-family: 'Roboto', sans-serif;
+  background-color: white;
+  width:100%;
 }
 
-header
 nav
 a{
   text-decoration: none;
@@ -25,13 +26,19 @@ nav
   margin-left: .5rem;
   font-size: .775rem;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 600;
+}
+
+header
+nav
+.logo{
+  margin-right: .9rem;
 }
 
 header
 nav
 .home{
-  margin-right: .9rem;
+  margin-left: 4.9rem;
 }
 
 main{

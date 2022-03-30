@@ -3,7 +3,16 @@
   padding:0;
   box-sizing:border-box;
 }
+/* SCROLL */
+/* body::-webkit-scrollbar{
+  width:.4rem;
+  padding-right:1rem;
+}
 
+body::-webkit-scrollbar-thumb{
+  background-color: rgb(158, 158, 158);
+  border-radius:1rem;
+} */
 
 header
 nav{
@@ -193,7 +202,7 @@ p{
   header
   nav
   .home{
-    margin-left:62.5rem;
+    margin-left:65.5rem;
   }
 
   main
@@ -208,7 +217,7 @@ p{
     flex-direction: row;
     margin:auto;
     margin-top:10%;
-    margin-bottom:5.5rem;
+    margin-bottom:6.5rem;
   }
 }
 
