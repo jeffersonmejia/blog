@@ -4,6 +4,21 @@
   box-sizing:border-box;
 }
 
+/* SCROLL */
+body{
+  margin-right: .1rem;
+}
+
+body::-webkit-scrollbar{
+  width:.5rem;
+  /* padding-right:1rem; */
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: rgb(158, 158, 158);
+  border-radius:1rem;
+}
+
 header
 nav{
   display:flex;
