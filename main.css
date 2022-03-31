@@ -7,7 +7,7 @@
   /* COLORS */
   --main-bg-color:#fff;
   --color-primary:#03045E;
-  --color-secundary:#023E8A;
+  --color-secondary:#023E8A;
   --color-tertiary:#0077B6;
   --hover-bg-color:#e6e6e6;
   --active-bg-color:#bfbfbf;
@@ -15,10 +15,11 @@
 body::-webkit-scrollbar{
   width:.5rem;
   background-color: var(--main-bg-color);
+  
 }
 
 body::-webkit-scrollbar-thumb{
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   border-radius:1rem;
 }
 
@@ -101,8 +102,6 @@ main
 
   padding-top: .2rem;
   padding: 1rem;
-  /* animation: bigger;
-  animation-duration: 5s; */
 }
 
 .title-container
@@ -142,6 +141,25 @@ main
 }
 
 main
+.presentation{
+  width:50%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  margin:auto;
+  margin-bottom: 2rem;
+  margin-top:2rem;
+  border-radius: 1rem;
+}
+
+main
+.presentation
+p{
+  font-family: 'Poppins', sans-serif;
+  color:white;
+  padding: 1rem;
+}
+
+main
 .container{
   width: 100%;
   display:flex;
@@ -173,7 +191,13 @@ main
 
 .container
 .square:hover{
-  background-color: var(--color-secundary);
+  background-color: var(--color-secondary);
+  
+}
+
+.container
+.square:active{
+  background-color: var(--color-tertiary);
 }
 
 main
@@ -220,10 +244,10 @@ img{
 
 @keyframes appear{
   0%{
-    transform: translate(-2rem, 0);
+    transform: translate(-7rem, 0);
   }
   25%{
-    width:30%;
+    width:45%;
   }
 }
 footer{
@@ -321,8 +345,8 @@ p{
     width:80%;
     flex-direction: row;
     margin:auto;
-    margin-top:8%;
-    margin-bottom:6.5rem;
+    /* margin-top:8%; */
+    margin-bottom:4.5rem;
   }
 }
 
