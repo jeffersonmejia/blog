@@ -141,6 +141,8 @@ main
 	margin-bottom: 2rem;
 	margin-top:2rem;
 	border-radius: 1rem;
+	cursor: default;
+
 }
 
 main
