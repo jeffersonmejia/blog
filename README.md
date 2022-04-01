@@ -1,2 +1,5 @@
 ## Introduction
-Blog about frontend technologies with HTML and CSS. Animations implemented.
+Frontend topics
+## Technologies
+• HTML <br/>
+• CSS
