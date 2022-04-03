@@ -27,6 +27,12 @@ body::-webkit-scrollbar-thumb{
 }
 /* BODY */
 
+@keyframes turn{
+	0%{
+		transform:translate(0, -5rem);
+	}
+}
+
 header
 nav{
 	width:100%;
@@ -48,6 +54,7 @@ a
 p{
 	padding-top: .25rem;
 }
+
 nav
 a:hover{
 	color:var(--color-secundary);
@@ -81,12 +88,6 @@ header
 nav
 .btn:active{
 	background-color:var(--active-bg-color);
-}
-
-header
-nav
-.logo{
-	margin-right: .9rem;
 }
 
 header
