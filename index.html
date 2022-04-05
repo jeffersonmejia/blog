@@ -1,119 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--SEO  -->
+		<meta name="description" content="Jefferson Mejía: Blog de desarrollo web frontend" />
+		<meta name="keywords" content="HTML, CSS, JavaScript, Jefferson" />
 
-	<!--SEO  -->
-	<meta 
-		name="description" 
-		content="Jefferson Mejía: Blog de desarrollo web frontend"/>
-	<meta 
-		name="keywords" 
-		content="HTML, CSS, JavaScript, Jefferson"/>
+		<title>Jefferson Mejía</title>
 
-	<title>
-		Jefferson Mejía
-	</title>
+		<!--STYLES  -->
+		<link rel="stylesheet" href="main.css" />
+		<!-- FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
 
-	<!--STYLES  -->
-	<link rel="stylesheet" href="main.css">
-	<!-- FONTS -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link 
-		href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;700&display=swap" 
-		rel="stylesheet"
-	/>
+	<body>
+		<header>
+			<nav>
+				<p class="logo"></p>
 
-</head>
-
-<body>
-	<header>
-		<nav>
-			<p class="logo"></p>
-			
-			<a href="./feed.html">
-				<p class="btn">
-					Feedback
-				</p>
-			</a>
-			
-			<a href="./contacto.html">
-				<p class="btn side">
-					Contactar
-				</p>
-			</a>
-			
-			<a href="">
-				<p class="btn">
-					Inicio
-				</p>
-			</a>
-
-		</nav>
-	</header>
-
-	<main>
-		<section class="title-container">
-			<h1 class="main-title">
-				<span class="typing">Desarrollo web</span>
-			</h1>
-		</section>
-		
-		<section class="presentation">
-			<p>
-				Hola, soy Jefferson Mejía, estudiante de ingeniería en sistemas y frontend developer. En este blog trataremos temas en
-				relación al desarrollo web del lado del cliente.
-			</p>
-		</section>
-
-		<section class="container">
-			<section class="first square">
-				<a href="./public/html.html">
-					<h1>
-						HTML
-					</h1>
-					<p>
-					 Maquetado, estructura, etiquetas
-					</p>
-					<img src="./icons/html-icon.jpg" alt="Proximamente">
+				<a href="./feed.html">
+					<p class="btn">Feedback</p>
 				</a>
+
+				<a href="./contacto.html">
+					<p class="btn side">Contactar</p>
+				</a>
+
+				<a href="">
+					<p class="btn">Inicio</p>
+				</a>
+			</nav>
+		</header>
+
+		<main>
+			<section class="title-container">
+				<h1 class="main-title">
+					<span class="typing">Desarrollo web</span>
+				</h1>
 			</section>
-	
-			<section class="square">
-				<a href="./public/css.html">
-					<h1>
-						CSS
-					</h1>
-					<p>
-						Reglas, selectores, propiedades, valores, medias
-					</p>
-					<img src="./icons/css-icon.jpg" alt="Proximamente">
-				</a>
-			</section>
-	
-			<section class="square">
-				<a href="./public/js.html">
-					<h1>
-						JS
-					</h1>
-					<p>
-						Sintáxis, lógica, asincronismo
-					</p>
-					<img src="./icons/js-icon.jpg" alt="Proximamente">
-				</a>
+			<!-- 
+			<section class="banner-container">
+				<div class="banner">hello world</div>
+			</section> -->
+			<section class="presentation">
+				<p>
+					Hola, soy Jefferson Mejía, estudiante de ingeniería en sistemas y frontend
+					developer. En este blog trataremos temas en relación al desarrollo web del lado
+					del cliente.
+				</p>
 			</section>
 
-		</section>
-	</main>
+			<section class="container">
+				<section class="first square">
+					<a href="./public/html.html">
+						<h1>HTML</h1>
+						<p>Maquetado, estructura, etiquetas</p>
+						<img src="./icons/html-icon.jpg" alt="Proximamente" />
+					</a>
+				</section>
 
-	<footer>
-		<p>Jefferson Mejía</p>
-	</footer>
+				<section class="square">
+					<a href="./public/css.html">
+						<h1>CSS</h1>
+						<p>Reglas, selectores, propiedades, valores, medias</p>
+						<img src="./icons/css-icon.jpg" alt="Proximamente" />
+					</a>
+				</section>
 
-</body>
+				<section class="square">
+					<a href="./public/js.html">
+						<h1>JS</h1>
+						<p>Sintáxis, lógica, asincronismo</p>
+						<img src="./icons/js-icon.jpg" alt="Proximamente" />
+					</a>
+				</section>
+			</section>
+		</main>
 
+		<footer>
+			<p>Jefferson Mejía</p>
+		</footer>
+	</body>
 </html>
