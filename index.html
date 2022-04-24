@@ -24,13 +24,13 @@
 	</head>
 
 	<body>
-		<header>
+		<header id="home">
 			<nav>
 				<ul class="container">
 					<li class="logo"><img src="./images/favicon.svg" alt="logo" /></li>
-					<li class="item home">Inicio</li>
-					<li class="item contact">Contactar</li>
-					<li class="item about">Acerca de</li>
+					<li class="item home" id="home"><a href="#home">Inicio</a></li>
+					<li class="item contact"><a href="">Contactar</a></li>
+					<li class="item about"><a href="">Acerca de</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -65,6 +65,32 @@
 					</figure>
 				</section>
 			</div>
+			<p class="about">
+				<i>"El presente blog universitario es una guía de cómo se deben utilizar las
+				plataformas académicas que ofrece la institución. Los manuales cuentan con guías
+				específicas que detallan desde lo más básico hasta lo más avanzado. Todo esto con
+				el fin de que la comunidad universitaria pueda acceder de manera equitativa a los
+				servicios que disponemos."</i></p>
+			</p>
+			<figure class="contact-us">
+				<figcaption class="title">Contáctanos</figcaption>
+				<form action="">
+					<label for="">Nombres</label>
+					<input type="text" placeholder="Escribe tus nombres completos" />
+
+					<label for="">Apellidos</label>
+					<input type="text" placeholder="Escribe tus apellidos completos" />
+
+					<label for="">Asunto</label>
+					<textarea
+						class="topic"
+						cols="30"
+						rows="10"
+						placeholder="Describe tu inquietud"
+					></textarea>
+					<input type="submit" value="Enviar" class="submit" />
+				</form>
+			</figure>
 		</main>
 
 		<footer>

@@ -1,5 +1,6 @@
 @import "reset";
 @import "variables";
+@import "animations";
 
 body {
 	background-color: $main-bg-color;
@@ -23,14 +24,23 @@ body {
 						padding-top: 5px;
 						padding-left: 10px;
 						list-style: none;
+						pointer-events: none;
 					}
 				}
 				.item {
 					list-style: none;
-					color: $main-bg-color;
 					justify-self: end;
 					font-size: $md;
+					cursor: pointer;
+					a {
+						text-decoration: none;
+						color: $main-bg-color;
+					}
+					a:hover {
+						color: $hover-alt;
+					}
 				}
+
 				.about {
 					padding-right: 10px;
 				}
@@ -53,6 +63,7 @@ body {
 					place-items: center;
 					.vector-1 {
 						width: 80%;
+						pointer-events: none;
 					}
 					figcaption {
 						font-family: "Opens Sans", sans-serif;
@@ -80,6 +91,7 @@ body {
 				grid-template-rows: repeat(3, 1fr);
 				row-gap: 20px;
 				.container {
+					cursor: pointer;
 					border: $border;
 					border-radius: $radius;
 					width: 80%;
@@ -96,6 +108,79 @@ body {
 						padding-top: 10px;
 						padding-bottom: 20px;
 					}
+				}
+				.container:hover {
+					background-color: $hover-alt;
+				}
+			}
+		}
+		.about {
+			width: 80%;
+			margin: auto;
+			font-family: "Poppins", sans-serif;
+			text-align: center;
+			font-size: $lg;
+
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+		.contact-us {
+			width: 80%;
+			margin: auto;
+			background-color: $bg-alt-color;
+			border-radius: $radius;
+			border: $border;
+			.title {
+				font-family: "Poppins", sans-serif;
+				text-align: center;
+				color: $color-primary;
+				padding-top: 20px;
+				margin-bottom: 10px;
+				font-size: $lg;
+				text-transform: uppercase;
+			}
+			form {
+				display: grid;
+				width: 90%;
+				margin: auto;
+
+				label {
+					color: $color-primary;
+					font-family: "Poppins", sans-serif;
+					font-size: $lg;
+					margin-bottom: 2px;
+				}
+				input:not(.submit) {
+					font-family: "Poppins", sans-serif;
+					font-size: $md;
+					margin-bottom: 10px;
+
+					padding-left: 5px;
+					border-bottom: $border;
+					background-color: $bg-alt-color;
+					outline: none;
+				}
+				textarea {
+					margin-bottom: 10px;
+
+					padding-left: 5px;
+					padding-top: 10px;
+					border: $border;
+					font-size: $md;
+					border-radius: $radius;
+					outline: none;
+					font-family: "Poppins", sans-serif;
+				}
+				.submit {
+					margin-top: 10px;
+					height: $btn-height;
+					margin-bottom: 20px;
+
+					font-family: "Poppins", sans-serif;
+					font-size: $md;
+					background-color: $color-primary;
+					color: $main-bg-color;
+					border-radius: $radius;
 				}
 			}
 		}
@@ -117,6 +202,10 @@ body {
 					max-width: 320px;
 				}
 			}
+
+			.contact-us {
+				max-width: 317px;
+			}
 		}
 	}
 }
@@ -128,6 +217,11 @@ body {
 				.container {
 					grid-template-columns: 65% repeat(3, 10%);
 				}
+			}
+		}
+		main {
+			.about {
+				max-width: 400px;
 			}
 		}
 	}

@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   border: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 html,
@@ -12,6 +14,11 @@ body {
   overflow-x: hidden;
 }
 
+@keyframes test {
+  0% {
+    background-color: #0421c0;
+  }
+}
 body {
   background-color: #fff;
 }
@@ -38,12 +45,20 @@ body header nav .container .logo img {
   padding-top: 5px;
   padding-left: 10px;
   list-style: none;
+  pointer-events: none;
 }
 body header nav .container .item {
   list-style: none;
-  color: #fff;
   justify-self: end;
   font-size: 12px;
+  cursor: pointer;
+}
+body header nav .container .item a {
+  text-decoration: none;
+  color: #fff;
+}
+body header nav .container .item a:hover {
+  color: #bbb9b9;
 }
 body header nav .container .about {
   padding-right: 10px;
@@ -68,6 +83,7 @@ body main .container .day-container figure {
 }
 body main .container .day-container figure .vector-1 {
   width: 80%;
+  pointer-events: none;
 }
 body main .container .day-container figure figcaption {
   font-family: "Opens Sans", sans-serif;
@@ -94,6 +110,7 @@ body main .container .systems {
   row-gap: 20px;
 }
 body main .container .systems .container {
+  cursor: pointer;
   border: 1px solid #dddddd;
   border-radius: 10px;
   width: 80%;
@@ -110,6 +127,74 @@ body main .container .systems .container img {
   width: 90%;
   padding-top: 10px;
   padding-bottom: 20px;
+}
+body main .container .systems .container:hover {
+  background-color: #bbb9b9;
+}
+body main .about {
+  width: 80%;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+body main .contact-us {
+  width: 80%;
+  margin: auto;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+}
+body main .contact-us .title {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #000e5c;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+body main .contact-us form {
+  display: grid;
+  width: 90%;
+  margin: auto;
+}
+body main .contact-us form label {
+  color: #000e5c;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+body main .contact-us form input:not(.submit) {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  border-bottom: 1px solid #dddddd;
+  background-color: #f7f7f7;
+  outline: none;
+}
+body main .contact-us form textarea {
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-top: 10px;
+  border: 1px solid #dddddd;
+  font-size: 12px;
+  border-radius: 10px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+body main .contact-us form .submit {
+  margin-top: 10px;
+  height: 40px;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  background-color: #000e5c;
+  color: #fff;
+  border-radius: 10px;
 }
 
 footer {
@@ -139,10 +224,16 @@ footer p {
   body main section .container {
     max-width: 320px;
   }
+  body main .contact-us {
+    max-width: 317px;
+  }
 }
 @media screen and (min-width: 500px) {
   body header nav .container {
     grid-template-columns: 65% repeat(3, 10%);
+  }
+  body main .about {
+    max-width: 400px;
   }
 }
 @media screen and (min-width: 768px) {
