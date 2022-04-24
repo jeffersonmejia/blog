@@ -142,10 +142,7 @@ footer p {
 }
 @media screen and (min-width: 500px) {
   body header nav .container {
-    grid-template-columns: 300px repeat(3, 1fr);
-  }
-  body header nav .container .item {
-    justify-self: end;
+    grid-template-columns: 65% repeat(3, 10%);
   }
 }
 @media screen and (min-width: 768px) {
