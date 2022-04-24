@@ -4,7 +4,7 @@
 
 ## Preview
 
-![](https://i.imgur.com/92rY5of_d.webp?maxwidth=760&fidelity=grand) { width: 20px; }
+![](https://i.imgur.com/92rY5of_d.webp?maxwidth=760&fidelity=grand)
 ![](https://i.imgur.com/2iLkLc7_d.webp?maxwidth=760&fidelity=grand)
 ![](https://i.imgur.com/YVAja3S_d.webp?maxwidth=760&fidelity=grand)
 
