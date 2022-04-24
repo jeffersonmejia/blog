@@ -6,7 +6,10 @@ body {
 	background-color: $main-bg-color;
 	header {
 		height: 50px;
+		width: 100%;
 		font-family: "Poppins", sans-serif;
+		position: fixed;
+
 		nav {
 			background-color: $color-primary;
 
@@ -49,15 +52,19 @@ body {
 	}
 	main {
 		width: 100vw;
-		padding-top: 20px;
-		padding-bottom: 20px;
+
+		.behind-nav {
+			height: 40px;
+		}
 		.container {
 			background-color: $main-bg-color;
 			display: grid;
 			place-items: center;
+
 			.day-container {
 				border-bottom: $border;
 				margin-bottom: 30px;
+				padding-top: 20px;
 				figure {
 					display: grid;
 					place-items: center;
@@ -194,7 +201,10 @@ body {
 		main {
 			.container {
 				.day-container {
-					max-width: 400px;
+					width: 100%;
+					img {
+						max-width: 400px;
+					}
 				}
 			}
 			section {

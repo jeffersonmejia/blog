@@ -24,7 +24,9 @@ body {
 }
 body header {
   height: 50px;
+  width: 100%;
   font-family: "Poppins", sans-serif;
+  position: fixed;
 }
 body header nav {
   background-color: #000e5c;
@@ -65,8 +67,9 @@ body header nav .container .about {
 }
 body main {
   width: 100vw;
-  padding-top: 20px;
-  padding-bottom: 20px;
+}
+body main .behind-nav {
+  height: 40px;
 }
 body main .container {
   background-color: #fff;
@@ -76,6 +79,7 @@ body main .container {
 body main .container .day-container {
   border-bottom: 1px solid #dddddd;
   margin-bottom: 30px;
+  padding-top: 20px;
 }
 body main .container .day-container figure {
   display: grid;
@@ -219,6 +223,9 @@ footer p {
 }
 @media screen and (min-width: 400px) {
   body main .container .day-container {
+    width: 100%;
+  }
+  body main .container .day-container img {
     max-width: 400px;
   }
   body main section .container {
