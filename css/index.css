@@ -40,14 +40,21 @@ body header nav .container {
 body header nav .container .logo {
   list-style: none;
   justify-self: start;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 body header nav .container .logo img {
   width: 40px;
   height: 40px;
-  padding-top: 5px;
   padding-left: 10px;
   list-style: none;
   pointer-events: none;
+}
+body header nav .container .logo .logo-text {
+  color: #fff;
+  padding-left: 5px;
 }
 body header nav .container .item {
   list-style: none;
@@ -150,6 +157,7 @@ body main .contact-us {
   background-color: #f7f7f7;
   border-radius: 10px;
   border: 1px solid #dddddd;
+  margin-bottom: 40px;
 }
 body main .contact-us .title {
   font-family: "Poppins", sans-serif;
