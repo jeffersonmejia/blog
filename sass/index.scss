@@ -3,7 +3,6 @@
 @import "animations";
 
 body {
-	background-color: $main-bg-color;
 	header {
 		height: 50px;
 		width: 100%;
@@ -125,7 +124,9 @@ body {
 					}
 				}
 				.container:hover {
-					background-color: $hover-alt;
+					background-color: $hover;
+					color: $main-bg-color;
+					width: 85%;
 				}
 			}
 		}
@@ -197,6 +198,10 @@ body {
 					background-color: $color-primary;
 					color: $main-bg-color;
 					border-radius: $radius;
+					cursor: pointer;
+				}
+				.submit:hover {
+					background-color: $hover;
 				}
 			}
 		}
@@ -255,6 +260,24 @@ body {
 
 					.last {
 						grid-column: 1/3;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	body {
+		main {
+			.container {
+				.systems {
+					grid-template-columns: repeat(3, 1fr);
+					grid-template-rows: 1fr;
+
+					.last {
+						grid-column: 2/3;
+						grid-row: 1/2;
 					}
 				}
 			}

@@ -14,13 +14,13 @@ body {
   overflow-x: hidden;
 }
 
-@keyframes test {
-  0% {
-    background-color: #0421c0;
+@keyframes boxBigger {
+  from {
+    width: 90%;
   }
-}
-body {
-  background-color: #fff;
+  to {
+    width: 100%;
+  }
 }
 body header {
   height: 50px;
@@ -140,7 +140,9 @@ body main .container .systems .container img {
   padding-bottom: 20px;
 }
 body main .container .systems .container:hover {
-  background-color: #bbb9b9;
+  background-color: #0421c0;
+  color: #fff;
+  width: 85%;
 }
 body main .about {
   width: 80%;
@@ -207,6 +209,10 @@ body main .contact-us form .submit {
   background-color: #000e5c;
   color: #fff;
   border-radius: 10px;
+  cursor: pointer;
+}
+body main .contact-us form .submit:hover {
+  background-color: #0421c0;
 }
 
 footer {
@@ -257,6 +263,16 @@ footer p {
   }
   body main .container .systems .last {
     grid-column: 1/3;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body main .container .systems {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+  body main .container .systems .last {
+    grid-column: 2/3;
+    grid-row: 1/2;
   }
 }
 
