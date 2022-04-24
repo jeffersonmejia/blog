@@ -17,6 +17,7 @@ body {
 				grid-template-columns: repeat(4, 1fr);
 				column-gap: 10px;
 				place-items: center;
+
 				.logo {
 					list-style: none;
 					justify-self: start;
@@ -145,8 +146,9 @@ body {
 			margin: auto;
 			background-color: $bg-alt-color;
 			border-radius: $radius;
-			border: $border;
+
 			margin-bottom: 40px;
+			box-shadow: 2px 2px 10px $text-color;
 			.title {
 				font-family: "Poppins", sans-serif;
 				text-align: center;

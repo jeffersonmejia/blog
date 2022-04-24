@@ -158,8 +158,8 @@ body main .contact-us {
   margin: auto;
   background-color: #f7f7f7;
   border-radius: 10px;
-  border: 1px solid #dddddd;
   margin-bottom: 40px;
+  box-shadow: 2px 2px 10px #a8a8a8;
 }
 body main .contact-us .title {
   font-family: "Poppins", sans-serif;
