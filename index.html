@@ -9,85 +9,68 @@
 		<meta name="description" content="Jefferson Mejía: Blog de desarrollo web frontend" />
 		<meta name="keywords" content="HTML, CSS, JavaScript, Jefferson" />
 
-		<title>Jefferson Mejía</title>
+		<link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
+		<title>Blog</title>
 
-		<!--STYLES  -->
-		<link rel="stylesheet" href="main.css" />
 		<!-- FONTS -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
+		<!--STYLES  -->
+		<link rel="stylesheet" href="./css/index.css" />
 	</head>
 
 	<body>
 		<header>
 			<nav>
-				<p class="logo"></p>
-
-				<a href="./feed.html">
-					<p class="btn">Feedback</p>
-				</a>
-
-				<a href="./contacto.html">
-					<p class="btn side">Contactar</p>
-				</a>
-
-				<a href="">
-					<p class="btn">Inicio</p>
-				</a>
+				<ul class="container">
+					<li class="logo"><img src="./images/favicon.svg" alt="logo" /></li>
+					<li class="item home">Inicio</li>
+					<li class="item contact">Contactar</li>
+					<li class="item about">Acerca de</li>
+				</ul>
 			</nav>
 		</header>
 
 		<main>
-			<section class="title-container">
-				<h1 class="main-title">
-					<span class="typing">Desarrollo web</span>
-				</h1>
-			</section>
-			<!-- 
-			<section class="banner-container">
-				<div class="banner">hello world</div>
-			</section> -->
-			<section class="presentation">
-				<p>
-					Hola, soy Jefferson Mejía, estudiante de ingeniería en sistemas y frontend
-					developer. En este blog trataremos temas en relación al desarrollo web del lado
-					del cliente.
-				</p>
-			</section>
+			<div class="container">
+				<div class="day-container">
+					<figure>
+						<img src="./images/vector-1.svg" alt="vector" class="vector vector-1" />
+						<figcaption>Las matrículas se habilitan a partir del 16 de abril</figcaption>
+					</figure>
 
-			<section class="container">
-				<section class="first square">
-					<a href="./public/html.html">
-						<h1>HTML</h1>
-						<p>Maquetado, estructura, etiquetas</p>
-						<img src="./icons/html-icon.jpg" alt="Proximamente" />
-					</a>
+					<figure>
+						<img src="./images/vector-2.svg" alt="vector" class="vector vector-2" />
+						<figcaption></figcaption>
+					</figure>
+				</div>
+				<section class="systems">
+					<figure class="container">
+						<figcaption>Aula virtual</figcaption>
+						<img src="./images/av.svg" alt="" />
+					</figure>
 				</section>
-
-				<section class="square">
-					<a href="./public/css.html">
-						<h1>CSS</h1>
-						<p>Reglas, selectores, propiedades, valores, medias</p>
-						<img src="./icons/css-icon.jpg" alt="Proximamente" />
-					</a>
+				<section class="systems">
+					<figure class="container">
+						<figcaption>Sistema de gestión</figcaption>
+						<img src="./images/sg.svg" alt="" />
+					</figure>
 				</section>
-
-				<section class="square">
-					<a href="./public/js.html">
-						<h1>JS</h1>
-						<p>Sintáxis, lógica, asincronismo</p>
-						<img src="./icons/js-icon.jpg" alt="Proximamente" />
-					</a>
+				<section class="systems">
+					<figure class="container">
+						<figcaption>Sistema de planificación</figcaption>
+						<img src="./images/sm.svg" alt="" />
+					</figure>
 				</section>
-			</section>
+			</div>
 		</main>
 
 		<footer>
-			<p>Jefferson Mejía</p>
+			<p class="footer-text">Sitio desarrollado por Jefferson Mejía</p>
 		</footer>
 	</body>
 </html>

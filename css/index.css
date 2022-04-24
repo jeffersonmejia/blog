@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  background-color: #fff;
+}
+body header {
+  height: 50px;
+  font-family: "Poppins", sans-serif;
+}
+body header nav {
+  background-color: #000e5c;
+}
+body header nav .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  place-items: center;
+}
+body header nav .container .logo {
+  list-style: none;
+  justify-self: start;
+}
+body header nav .container .logo img {
+  width: 40px;
+  height: 40px;
+  padding-top: 5px;
+  padding-left: 10px;
+  list-style: none;
+}
+body header nav .container .item {
+  list-style: none;
+  color: #fff;
+  justify-self: end;
+  font-size: 12px;
+}
+body header nav .container .about {
+  padding-right: 10px;
+}
+body main {
+  width: 100vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+body main .container {
+  background-color: #fff;
+  display: grid;
+  place-items: center;
+}
+body main .container .day-container {
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 30px;
+}
+body main .container .day-container figure {
+  display: grid;
+  place-items: center;
+}
+body main .container .day-container figure .vector-1 {
+  width: 80%;
+}
+body main .container .day-container figure figcaption {
+  font-family: "Opens Sans", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 10px;
+  color: #021580;
+  font-weight: 600;
+  padding-left: 30px;
+  padding-right: 30px;
+  word-wrap: break-word;
+}
+body main .container .day-container figure .vector-2 {
+  display: none;
+  width: 0;
+  height: 0;
+}
+body main .container .systems {
+  display: grid;
+  place-items: center;
+  margin-top: 10px;
+}
+body main .container .systems .container {
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  width: 80%;
+  display: grid;
+  place-items: center;
+}
+body main .container .systems .container figcaption {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+}
+body main .container .systems .container img {
+  width: 90%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+footer {
+  background-color: #000e5c;
+}
+footer p {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 11px;
+}
+
+@media screen and (min-width: 400px) {
+  body main .container .day-container {
+    max-width: 400px;
+  }
+  body main section .container {
+    max-width: 320px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
