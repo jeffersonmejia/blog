@@ -77,12 +77,15 @@ body {
 				display: grid;
 				place-items: center;
 				margin-top: 10px;
+				grid-template-rows: repeat(3, 1fr);
+				row-gap: 20px;
 				.container {
 					border: $border;
 					border-radius: $radius;
 					width: 80%;
 					display: grid;
 					place-items: center;
+					grid-template-rows: repeat(3, 1/2fr);
 					figcaption {
 						text-align: center;
 						font-family: "Poppins", sans-serif;
@@ -112,6 +115,37 @@ body {
 			section {
 				.container {
 					max-width: 320px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 500px) {
+	body {
+		header {
+			nav {
+				.container {
+					grid-template-columns: 300px repeat(3, 1fr);
+					.item {
+						justify-self: end;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	body {
+		main {
+			.container {
+				.systems {
+					grid-template-rows: repeat(2, 1fr);
+
+					.last {
+						grid-column: 1/3;
+					}
 				}
 			}
 		}
