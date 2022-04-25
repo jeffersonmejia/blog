@@ -77,21 +77,25 @@
 			</p>
 			<figure class="contact-us" id="contact-us">
 				<figcaption class="title">Contáctanos</figcaption>
-				<form action="">
-					<label for="">Nombres</label>
-					<input type="text" placeholder="Escribe tus nombres completos" />
+				<form action="" id="form">
+					<label for="">Nombres*</label>
+					<input type="text" placeholder="Escribe tus nombres completos" id="name" />
+					<h5 class="in-alert" id="alert-name"></h5>
 
-					<label for="">Apellidos</label>
-					<input type="text" placeholder="Escribe tus apellidos completos" />
+					<label for="">Apellidos*</label>
+					<input type="text" placeholder="Escribe tus apellidos completos" id="lastname"/>
+					<h5 class="in-alert" id="alert-lastname"></h5>
 
-					<label for="">Asunto</label>
+					<label for="">Asunto*</label>
 					<textarea
 						class="topic"
+						id="topic"
 						cols="30"
 						rows="10"
 						placeholder="Describe tu inquietud"
-					></textarea>
-					<input type="submit" value="Enviar" class="submit" />
+					></textarea >
+					<h5 class="in-alert" id="alert-topic"></h5>
+					<input type="submit" value="Enviar" class="submit" id="submit" />
 				</form>
 			</figure>
 		</main>
@@ -99,5 +103,6 @@
 		<footer>
 			<p class="footer-text">Sitio desarrollado por Jefferson Mejía</p>
 		</footer>
+		<script src="./js/app.js"></script>
 	</body>
 </html>
