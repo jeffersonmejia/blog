@@ -64,6 +64,7 @@ body header nav .container .logo {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 5px;
 }
 body header nav .container .logo img {
   width: 40px;
@@ -75,6 +76,7 @@ body header nav .container .logo img {
 body header nav .container .logo .logo-text {
   color: #fff;
   padding-left: 5px;
+  margin-top: 3px;
 }
 body header nav .container .item {
   list-style: none;
@@ -85,6 +87,10 @@ body header nav .container .item {
 body header nav .container .item a {
   text-decoration: none;
   color: #fff;
+  transition-property: color;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+  transition-delay: linear;
 }
 body header nav .container .item a:hover {
   color: #bbb9b9;
@@ -148,6 +154,10 @@ body main .container .systems .container {
   display: grid;
   place-items: center;
   grid-template-rows: repeat(3, 1/2fr);
+  transition-property: width, background-color;
+  transition-duration: 700ms;
+  transition-timing-function: ease;
+  transition-delay: ease-out;
 }
 body main .container .systems .container figcaption {
   text-align: center;

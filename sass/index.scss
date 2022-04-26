@@ -45,6 +45,7 @@ body {
 					display: flex;
 					flex-direction: row;
 					align-items: center;
+					margin-top: 5px;
 					img {
 						width: 40px;
 						height: 40px;
@@ -56,6 +57,7 @@ body {
 					.logo-text {
 						color: $main-bg-color;
 						padding-left: 5px;
+						margin-top: 3px;
 					}
 				}
 				.item {
@@ -66,6 +68,10 @@ body {
 					a {
 						text-decoration: none;
 						color: $main-bg-color;
+						transition-property: color;
+						transition-duration: 600ms;
+						transition-timing-function: ease;
+						transition-delay: linear;
 					}
 					a:hover {
 						color: $hover-alt;
@@ -133,6 +139,10 @@ body {
 					display: grid;
 					place-items: center;
 					grid-template-rows: repeat(3, 1/2fr);
+					transition-property: width, background-color;
+					transition-duration: 700ms;
+					transition-timing-function: ease;
+					transition-delay: ease-out;
 					figcaption {
 						text-align: center;
 						font-family: "Poppins", sans-serif;
