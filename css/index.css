@@ -44,59 +44,57 @@ body header {
   height: 50px;
   font-family: "Poppins", sans-serif;
   position: fixed;
-  display: grid;
-  grid-template-columns: 1fr;
 }
 body header nav {
   background-color: #000e5c;
   margin-right: 10px;
-}
-body header nav .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 10px;
-  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
 }
-body header nav .container .logo {
+body header nav .logo {
   list-style: none;
-  justify-self: start;
-  margin-left: 5px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   margin-top: 5px;
+  width: 30%;
 }
-body header nav .container .logo img {
+body header nav .logo img {
   width: 40px;
   height: 40px;
-  padding-left: 10px;
   list-style: none;
   pointer-events: none;
+  padding-left: 10px;
 }
-body header nav .container .logo .logo-text {
+body header nav .logo .logo-text {
   color: #fff;
   padding-left: 5px;
-  margin-top: 3px;
+  display: none;
+}
+body header nav .container {
+  grid-column: 2/3;
+  justify-self: end;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
 }
 body header nav .container .item {
   list-style: none;
-  justify-self: end;
+  width: 5rem;
   font-size: 12px;
   cursor: pointer;
-}
-body header nav .container .item a {
-  text-decoration: none;
-  color: #fff;
-  transition-property: color;
+  padding-top: 13px;
+  height: 100%;
+  justify-content: end;
+  text-align: center;
+  transition-property: background-color;
   transition-duration: 600ms;
   transition-timing-function: ease;
   transition-delay: linear;
 }
-body header nav .container .item a:hover {
-  color: #bbb9b9;
+body header nav .container .item a {
+  text-decoration: none;
+  color: #fff;
 }
-body header nav .container .about {
-  padding-right: 10px;
+body header nav .container .item:hover {
+  background-color: #021580;
 }
 body main {
   width: 100vw;
@@ -283,14 +281,18 @@ footer p {
   }
 }
 @media screen and (min-width: 500px) {
-  body header nav .container {
-    grid-template-columns: 65% repeat(3, 10%);
-  }
   body main .about {
     max-width: 400px;
   }
 }
 @media screen and (min-width: 768px) {
+  body header nav .logo {
+    display: flex;
+  }
+  body header nav .logo .logo-text {
+    display: block;
+    margin-top: 9px;
+  }
   body main .container .systems {
     grid-template-rows: repeat(2, 1fr);
   }
