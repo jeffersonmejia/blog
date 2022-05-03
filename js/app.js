@@ -1,8 +1,16 @@
-const form = document.getElementById("form");
-const inputs = document.querySelectorAll("#form input");
-const alertName = document.getElementById("alert-name");
-const alertLast = document.getElementById("alert-lastname");
-const alertTopic = document.getElementById("alert-topc");
+// Form valitations
+const $formEl = {
+	$form: document.getElementById("form"),
+	$input: document.querySelectorAll("#form input"),
+	$textarea: document.getElementById("#form textarea"),
+	$submit: document.querySelector("#form #submit"),
+};
+
+const $alert = {
+	$name: document.getElementById("alert-name"),
+	$lastname: document.getElementById("alert-lastname"),
+	$submit: document.querySelector("#form #alert-submit"),
+};
 
 const expression = {
 	name: /^[a-zA-Z]{3,16}\s{1}[a-zA-Z]{3,16}$/,
@@ -30,13 +38,13 @@ const validate = (input) => {
 	switch (input.target.id) {
 		case "name": {
 			if (input.target.value === "") {
-				alertName.innerHTML = listAlert.name.blank;
-				alertName.style.color = colorAlert.incorrect;
+				$alert.$name.innerHTML = listAlert.name.blank;
+				$alert.$name.style.color = colorAlert.incorrect;
 			} else if (!expression.name.test(input.target.value)) {
-				alertName.innerHTML = listAlert.name.incorrect;
-				alertName.style.color = colorAlert.incorrect;
+				$alert.$name.innerHTML = listAlert.name.incorrect;
+				$alert.$name.style.color = colorAlert.incorrect;
 			} else {
-				alertName.innerHTML = "";
+				$alert.$name.innerHTML = "";
 			}
 
 			break;
@@ -44,13 +52,13 @@ const validate = (input) => {
 
 		case "lastname": {
 			if (input.target.value === "") {
-				alertLast.innerHTML = listAlert.lastname.blank;
-				alertLast.style.color = colorAlert.incorrect;
+				$alert.$lastname.innerHTML = listAlert.lastname.blank;
+				$alert.$lastname.style.color = colorAlert.incorrect;
 			} else if (!expression.lastname.test(input.target.value)) {
-				alertLast.innerHTML = listAlert.lastname.incorrect;
-				alertLast.style.color = colorAlert.incorrect;
+				$alert.$lastname.innerHTML = listAlert.lastname.incorrect;
+				$alert.$lastname.style.color = colorAlert.incorrect;
 			} else {
-				alertLast.innerHTML = "";
+				$alert.$lastname.innerHTML = "";
 			}
 			break;
 		}
@@ -61,13 +69,12 @@ const validate = (input) => {
 	}
 };
 
-inputs.forEach((el) => {
+$formEl.$input.forEach((el) => {
 	el.addEventListener("keyup", validate, true);
-	el.addEventListener("blur", validate, true);
 });
 
-form.addEventListener(
-	"click",
+$formEl.$form.addEventListener(
+	"submit",
 	(e) => {
 		e.preventDefault();
 	},

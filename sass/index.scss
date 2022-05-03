@@ -237,9 +237,14 @@ body {
 					border-radius: $radius;
 					cursor: not-allowed;
 				}
-				// .submit:hover {
-				// 	background-color: $hover;
-				// }
+				.alert-alert {
+					font-family: "Poppins", sans-serif;
+					font-size: $sm;
+					font-weight: 400;
+					color: $text-color;
+					margin-bottom: 10px;
+					text-align: center;
+				}
 			}
 		}
 	}

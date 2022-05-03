@@ -236,6 +236,14 @@ body main .contact-us form .submit {
   border-radius: 10px;
   cursor: not-allowed;
 }
+body main .contact-us form .alert-alert {
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 10px;
+  text-align: center;
+}
 
 footer {
   background-color: #000e5c;
