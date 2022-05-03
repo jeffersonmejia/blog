@@ -3,8 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   border: none;
-  -webkit-user-select: none;
-  user-select: none;
+  text-decoration: none;
 }
 
 html,
@@ -14,14 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-@keyframes boxBigger {
-  from {
-    width: 90%;
-  }
-  to {
-    width: 100%;
-  }
-}
 body::-webkit-scrollbar {
   position: absolute;
   width: 10px;
