@@ -1,8 +1,8 @@
 // Form valitations
 const $formEl = {
 	$form: document.getElementById("form"),
-	$input: document.querySelectorAll("#form input"),
-	$textarea: document.getElementById("#form textarea"),
+	$input: document.querySelectorAll("#form .input"),
+	$textarea: document.querySelector("#form #topic"),
 	$submit: document.querySelector("#form #submit"),
 };
 
@@ -16,6 +16,12 @@ const expression = {
 	name: /^[a-zA-Z]{3,16}\s{1}[a-zA-Z]{3,16}$/,
 	lastname: /^[a-zA-Z]{3,16}\s{1}[a-zA-Z]{3,16}$/,
 	topic: /.{8,64}/,
+};
+
+let filled = {
+	name: false,
+	lastname: false,
+	topic: false,
 };
 
 const listAlert = {
@@ -45,6 +51,7 @@ const validate = (input) => {
 				$alert.$name.style.color = colorAlert.incorrect;
 			} else {
 				$alert.$name.innerHTML = "";
+				filled.name = true;
 			}
 
 			break;
@@ -59,12 +66,23 @@ const validate = (input) => {
 				$alert.$lastname.style.color = colorAlert.incorrect;
 			} else {
 				$alert.$lastname.innerHTML = "";
+				filled.lastname = true;
 			}
 			break;
 		}
 		case "topic": {
-			console.log("topic");
+			if (!input.target.value === "") {
+				filled.topic = true;
+			}
 			break;
+		}
+	}
+	if (filled.name === true) {
+		if (filled.lastname === true) {
+			if ($formEl.$textarea.value != "") {
+				$formEl.$submit.style.cursor = "pointer";
+				$formEl.$submit.style.backgroundColor = "#000e5c";
+			}
 		}
 	}
 };
@@ -77,6 +95,14 @@ $formEl.$form.addEventListener(
 	"submit",
 	(e) => {
 		e.preventDefault();
+		if (filled.name === true) {
+			if (filled.lastname === true) {
+				if ($formEl.$textarea.value != "") {
+					$alert.$submit.innerHTML = "Formulario enviado exitosamente";
+					$alert.$submit.style.color = colorAlert.correct;
+				}
+			}
+		}
 	},
 	false
 );
