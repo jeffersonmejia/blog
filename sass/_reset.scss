@@ -1,0 +1,41 @@
+:root {
+	--main-font: "Poppins", sans-serif;
+	--font-size: 16px;
+	--small: 0.7em;
+	--normal: 0.8em;
+	--medium: 1.2em;
+	--large: 1.6em;
+
+	--main-color: #000e5c;
+	--second-color: #fff;
+	--botton-bg: var(--second-color);
+	--botton-text: #3554ff;
+
+	--container-width: 1200px;
+
+	--border: 1px solid rgb(182, 182, 182);
+	--radius: 10px;
+}
+
+html {
+	box-sizing: border-box;
+	font-family: var(--main-font);
+	font-size: var(--font-size);
+	scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	overflow-x: hidden;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}

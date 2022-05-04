@@ -6,8 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!--SEO  -->
-		<meta name="description" content="Jefferson Mejía: Blog de desarrollo web frontend" />
-		<meta name="keywords" content="HTML, CSS, JavaScript, Jefferson" />
+		<meta name="description" content="Jefferson Mejía: Blog Universitario" />
+		<meta name="keywords" content="Universitario, blog, Jefferson" />
 
 		<link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
 		<title>Blog | Inicio</title>
@@ -23,5 +23,66 @@
 		<link rel="stylesheet" href="./css/index.css" />
 	</head>
 
-	<body></body>
+	<body>
+		<!-- HEADER -->
+		<header>
+			<nav>
+				<img src="./images/favicon.svg" width="40" />
+				<ul>
+					<li><a href="">Inicio</a></li>
+					<li><a href="">Contacto</a></li>
+					<li><a href="">Acerca de</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- MAIN -->
+		<main>
+			<section class="news">
+				<figure>
+					<img src="./images/vector-1.svg" width="300" />
+					<figcaption>Matriculas habilitadas a partir del 16 de abril</figcaption>
+				</figure>
+			</section>
+
+			<section class="systems">
+				<h1>Sistemas académicos</h1>
+				<figure class="first-child">
+					<img src="./images/sg.svg" width="300" />
+					<figcaption>Sistema de inscripciones</figcaption>
+				</figure>
+				<figure>
+					<img src="./images/sm.svg" width="300" />
+					<figcaption>Sistema de gestión</figcaption>
+				</figure>
+			</section>
+
+			<section class="about">
+				<p>
+					<i
+						>El presente blog universitario da a conocer los manuales para el uso de los
+						sistemas académicos de la institución</i
+					>
+				</p>
+			</section>
+
+			<form class="contact-us">
+				<h2>Contáctanos</h2>
+				<label for="">Nombre</label>
+				<input type="text" placeholder="Ingresa tus dos nombres" />
+				<label for="">Apellido</label>
+				<input type="text" placeholder="Ingresa tus dos apellidos" />
+				<label for="">Asunto</label>
+				<textarea
+					cols="30"
+					rows="10"
+					placeholder="Redacta de manera breve el asunto"
+				></textarea>
+				<input type="submit" value="Enviar" />
+			</form>
+		</main>
+		<footer>
+			<p>Actualmente en la versión 2.0</p>
+			<p>Sitio desarrollado por Jefferson Mejía | 2022</p>
+		</footer>
+	</body>
 </html>

@@ -1,24 +1,40 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border: none;
-  text-decoration: none;
+:root {
+  --main-font: "Poppins", sans-serif;
+  --font-size: 16px;
+  --small: 0.7em;
+  --normal: 0.8em;
+  --medium: 1.2em;
+  --large: 1.6em;
+  --main-color: #000e5c;
+  --second-color: #fff;
+  --botton-bg: var(--second-color);
+  --botton-text: #3554ff;
+  --container-width: 1200px;
+  --border: 1px solid rgb(182, 182, 182);
+  --radius: 10px;
 }
 
-html,
+html {
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
-  width: 100%;
-  height: 100%;
+  margin: 0;
   overflow-x: hidden;
 }
 
-body::-webkit-scrollbar {
-  background-color: transparent;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: transparent;
+img {
+  width: 100%;
+  height: auto;
 }
 
 body {
@@ -27,298 +43,177 @@ body {
   flex-wrap: wrap;
 }
 body header {
+  top: 0;
   width: 100%;
   height: 50px;
-  font-family: "Poppins", sans-serif;
-  position: fixed;
+  position: sticky;
+  background-color: var(--main-color);
 }
 body header nav {
-  background-color: #000e5c;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto 1fr;
+  place-content: center;
+  height: 100%;
+  padding-right: 15px;
+  box-shadow: rgb(189, 189, 189) 1px 1px 10px;
 }
-body header nav .logo {
-  list-style: none;
-  margin-top: 5px;
-  width: 30%;
-}
-body header nav .logo img {
+body header nav img {
   width: 40px;
-  height: 40px;
-  list-style: none;
-  pointer-events: none;
   padding-left: 10px;
 }
-body header nav .logo .logo-text {
-  color: #fff;
-  padding-left: 5px;
-  display: none;
-}
-body header nav .container {
-  grid-column: 2/3;
-  justify-self: end;
+body header nav ul {
+  list-style: none;
+  margin: auto 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
-  width: fit-content;
+  flex-wrap: wrap;
+  justify-self: right;
 }
-body header nav .container .item {
-  list-style: none;
-  width: 5rem;
-  font-size: 12px;
-  cursor: pointer;
-  padding-top: 13px;
-  height: 100%;
-  justify-content: end;
-  text-align: center;
-  transition-property: background-color;
-  transition-duration: 600ms;
-  transition-timing-function: ease;
-  transition-delay: linear;
+body header nav ul li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: 15px;
 }
-body header nav .container .item a {
+body header nav ul li a {
   text-decoration: none;
-  color: #fff;
-}
-body header nav .container .item:hover {
-  background-color: #021580;
+  color: var(--second-color);
+  font-size: var(--normal);
 }
 body main {
-  width: 100vw;
+  width: 100%;
 }
-body main .behind-nav {
-  height: 40px;
+body main .news figure {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-body main .container {
-  background-color: #fff;
-  display: grid;
-  place-items: center;
+body main .news figure img {
+  max-width: 320px;
+  margin: auto;
 }
-body main .container .day-container {
-  border-bottom: 1px solid #dddddd;
-  margin-bottom: 30px;
-  padding-top: 20px;
-}
-body main .container .day-container figure {
-  display: grid;
-  place-items: center;
-}
-body main .container .day-container figure .vector-1 {
-  width: 80%;
-  pointer-events: none;
-}
-body main .container .day-container figure figcaption {
-  font-family: "Opens Sans", sans-serif;
-  font-size: 18px;
+body main .news figure figcaption {
+  width: 100%;
+  padding-bottom: 15px;
   text-align: center;
-  text-transform: uppercase;
-  padding-top: 10px;
-  color: #021580;
+  font-size: var(--large);
   font-weight: 600;
-  padding-left: 30px;
-  padding-right: 30px;
-  word-wrap: break-word;
+  color: var(--main-color);
+  border-bottom: var(--border);
 }
-body main .container .day-container figure .vector-2 {
-  display: none;
-  width: 0;
-  height: 0;
-}
-body main .container .systems {
-  display: grid;
-  place-items: center;
-  margin-top: 10px;
-  grid-template-rows: repeat(3, 1fr);
-  row-gap: 20px;
-}
-body main .container .systems .container {
-  cursor: pointer;
-  border: 1px solid #dddddd;
-  border-radius: 10px;
-  width: 80%;
-  display: grid;
-  place-items: center;
-  grid-template-rows: repeat(3, 1/2fr);
-  transition-property: width, background-color;
-  transition-duration: 700ms;
-  transition-timing-function: ease;
-  transition-delay: ease-out;
-}
-body main .container .systems .container figcaption {
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  margin-top: 20px;
-}
-body main .container .systems .container img {
-  width: 90%;
-  padding-top: 10px;
+body main .systems {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: var(--border);
   padding-bottom: 20px;
 }
-body main .about {
-  width: 80%;
-  margin: auto;
-  font-family: "Poppins", sans-serif;
+body main .systems h1 {
   text-align: center;
-  font-size: 14px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  color: var(--main-color);
+  font-size: var(--medium);
+}
+body main .systems figure {
+  max-width: 288px;
+  border-radius: var(--radius);
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-shadow: rgb(189, 189, 189) 1px 1px 10px;
+}
+body main .systems figure figcaption {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  font-size: var(--normal);
+}
+body main .about {
+  max-width: 380px;
+  padding: 15px;
+  margin: auto;
+}
+body main .about p {
+  text-align: center;
+  font-size: var(--normal);
 }
 body main .contact-us {
+  max-width: 348px;
   width: 80%;
   margin: auto;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  margin-bottom: 40px;
-  box-shadow: 2px 2px 10px #a8a8a8;
+  padding: 20px 30px;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: var(--normal);
+  box-shadow: 1px 1px 10px #bdbdbd;
 }
-body main .contact-us .title {
-  font-family: "Poppins", sans-serif;
+body main .contact-us h2 {
+  margin: 10px;
   text-align: center;
-  color: #000e5c;
-  padding-top: 20px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  text-transform: uppercase;
+  color: var(--main-color);
+  font-size: var(--x-large);
 }
-body main .contact-us form {
-  display: grid;
-  width: 90%;
-  margin: auto;
+body main .contact-us label {
+  margin-bottom: 5px;
 }
-body main .contact-us form label {
-  color: #000e5c;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  margin-bottom: 2px;
+body main .contact-us input {
+  padding-bottom: 5px;
+  width: 100%;
 }
-body main .contact-us form input:not(.submit) {
-  font-family: "Poppins", sans-serif;
-  font-size: 12px;
-  margin-bottom: 3px;
-  padding-left: 5px;
-  border-bottom: 1px solid #dddddd;
-  background-color: #f7f7f7;
+body main .contact-us input,
+body main .contact-us textarea {
   outline: none;
 }
-body main .contact-us form .in-alert {
-  font-family: "Poppins", sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  color: #000000;
-  margin-bottom: 10px;
+body main .contact-us textarea {
+  padding: 5px 5px;
+  border: var(--border);
 }
-body main .contact-us form textarea {
-  padding-left: 5px;
-  padding-top: 10px;
-  border: 1px solid #dddddd;
-  font-size: 12px;
-  border-radius: 10px;
-  outline: none;
-  font-family: "Poppins", sans-serif;
+body main .contact-us input {
+  border: none;
+  border-bottom: var(--border);
+  margin-bottom: 25px;
 }
-body main .contact-us form .submit {
-  margin-top: 10px;
+body main .contact-us textarea {
+  border-radius: var(--radius);
+  width: 100%;
+  font-family: var(--main-font);
+  font-size: var(--normal);
+}
+body main .contact-us input[type=submit] {
   height: 40px;
-  margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
-  font-size: 12px;
-  background-color: #0428f0;
-  color: #fff;
-  border-radius: 10px;
-  cursor: not-allowed;
-}
-body main .contact-us form .alert-alert {
-  font-family: "Poppins", sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  color: #000000;
-  margin-bottom: 10px;
-  text-align: center;
+  margin-top: 15px;
+  border: 1px solid var(--botton-text);
+  border-radius: var(--radius);
+  background-color: var(--botton-bg);
+  color: var(--botton-text);
 }
 
 footer {
-  background-color: #000e5c;
-  height: 50px;
   width: 100%;
-  display: grid;
-  place-items: center;
+  background-color: var(--main-color);
+  margin-top: 30px;
 }
 footer p {
-  color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-size: var(--small);
   text-align: center;
-  font-size: 11px;
+  color: var(--second-color);
 }
 
-@media screen and (min-width: 400px) {
-  body main .container .day-container {
-    width: 100%;
-  }
-  body main .container .day-container img {
-    max-width: 400px;
-  }
-  body main section .container {
-    max-width: 320px;
-  }
-  body main .contact-us {
-    max-width: 317px;
-  }
-}
-@media screen and (min-width: 500px) {
-  body main .about {
-    max-width: 400px;
-  }
-}
 @media screen and (min-width: 768px) {
-  body::-webkit-scrollbar {
-    position: absolute;
-    width: 10px;
-    background-color: #ececec;
+  body main .systems {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
   }
-
-  body::-webkit-scrollbar-thumb {
-    background-color: #004379;
-    border-radius: 50px;
-    margin-right: 10px;
-    padding-right: 10px;
-    border-right: 1px solid #fff;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    border-left: 1px solid #fff;
-  }
-
-  body header nav {
-    margin-right: 10px;
-  }
-  body header nav .logo {
-    display: flex;
-  }
-  body header nav .logo .logo-text {
-    display: block;
-    margin-top: 9px;
-  }
-  body main .container .systems {
-    grid-template-rows: repeat(2, 1fr);
-  }
-  body main .container .systems .last {
+  body main .systems h1 {
     grid-column: 1/3;
   }
-}
-@media screen and (min-width: 1024px) {
-  body header header .container .item:hover {
-    background-color: #021580;
-  }
-  body main .container .systems {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-  }
-  body main .container .systems .last {
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-  body main .container .systems .container:hover {
-    background-color: #0421c0;
-    color: #fff;
-    width: 85%;
+  body main .systems .first-child {
+    justify-self: right;
   }
 }
 
