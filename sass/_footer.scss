@@ -11,10 +11,3 @@ footer {
 		font-size: $sm;
 	}
 }
-
-@media screen and(min-height:1135px) {
-	footer {
-		position: absolute;
-		bottom: 0;
-	}
-}

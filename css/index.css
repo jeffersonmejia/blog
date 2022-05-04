@@ -14,22 +14,18 @@ body {
 }
 
 body::-webkit-scrollbar {
-  position: absolute;
-  width: 10px;
-  background-color: #ececec;
+  background-color: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #004379;
-  border-radius: 50px;
-  margin-right: 10px;
-  padding-right: 10px;
-  border-right: 1px solid #fff;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  border-left: 1px solid #fff;
+  background-color: transparent;
 }
 
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 body header {
   width: 100%;
   height: 50px;
@@ -38,7 +34,6 @@ body header {
 }
 body header nav {
   background-color: #000e5c;
-  margin-right: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -158,11 +153,6 @@ body main .container .systems .container img {
   padding-top: 10px;
   padding-bottom: 20px;
 }
-body main .container .systems .container:hover {
-  background-color: #0421c0;
-  color: #fff;
-  width: 85%;
-}
 body main .about {
   width: 80%;
   margin: auto;
@@ -259,12 +249,6 @@ footer p {
   font-size: 11px;
 }
 
-@media screen and (min-height: 1135px) {
-  footer {
-    position: absolute;
-    bottom: 0;
-  }
-}
 @media screen and (min-width: 400px) {
   body main .container .day-container {
     width: 100%;
@@ -285,6 +269,26 @@ footer p {
   }
 }
 @media screen and (min-width: 768px) {
+  body::-webkit-scrollbar {
+    position: absolute;
+    width: 10px;
+    background-color: #ececec;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #004379;
+    border-radius: 50px;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+  }
+
+  body header nav {
+    margin-right: 10px;
+  }
   body header nav .logo {
     display: flex;
   }
@@ -300,6 +304,9 @@ footer p {
   }
 }
 @media screen and (min-width: 1024px) {
+  body header header .container .item:hover {
+    background-color: #021580;
+  }
   body main .container .systems {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -307,6 +314,11 @@ footer p {
   body main .container .systems .last {
     grid-column: 2/3;
     grid-row: 1/2;
+  }
+  body main .container .systems .container:hover {
+    background-color: #0421c0;
+    color: #fff;
+    width: 85%;
   }
 }
 

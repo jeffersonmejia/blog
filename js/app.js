@@ -1,3 +1,8 @@
+// PAGE CONFIG window.navigator.userAgent -> detect browser
+const isDesktop = {
+	linux: () => ua.match(/linux/),
+};
+
 // Form valitations
 const $formEl = {
 	$form: document.getElementById("form"),
@@ -106,3 +111,4 @@ $formEl.$form.addEventListener(
 	},
 	false
 );
+// NO MORE TO 150 LINES AT THIS VERSION (0.1v)
