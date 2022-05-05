@@ -1,6 +1,7 @@
 @import "reset";
 
 body {
+	@import "loader";
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;

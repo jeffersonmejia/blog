@@ -1,5 +1,11 @@
 const d = document;
 
+let appConfig = {
+	loader: 1,
+};
+
+const $loader = document.querySelector("main .loader");
+
 const $formEl = {
 	$form: d.querySelector("form"),
 	$input: d.querySelectorAll(".input"),
@@ -41,6 +47,15 @@ const alerts = {
 	topic: "El asunto debe contener mínimo 32 carácteres",
 	submit: "Solicitud enviada correctamente",
 };
+
+window.addEventListener("load", () => {
+	if (appConfig.loader === 1) {
+		$loader.classList.toggle("loader-on");
+		setTimeout(() => {
+			$loader.classList.remove("loader-on");
+		}, 3000);
+	}
+});
 
 $formEl.$form.addEventListener(
 	"keyup",
