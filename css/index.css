@@ -9,6 +9,7 @@
   --second-color: #fff;
   --botton-bg: var(--second-color);
   --botton-text: #3554ff;
+  --hover: #00137e;
   --container-width: 1200px;
   --border: 1px solid rgb(182, 182, 182);
   --radius: 10px;
@@ -54,16 +55,17 @@ body header nav {
   grid-template-columns: auto 1fr;
   place-content: center;
   height: 100%;
-  padding-right: 15px;
   box-shadow: rgb(189, 189, 189) 1px 1px 10px;
 }
 body header nav img {
   width: 40px;
   padding-left: 10px;
+  padding-top: 10px;
 }
 body header nav ul {
   list-style: none;
-  margin: auto 0;
+  height: 50px;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -71,15 +73,24 @@ body header nav ul {
   justify-self: right;
 }
 body header nav ul li {
+  width: max-content;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-right: 15px;
 }
 body header nav ul li a {
   text-decoration: none;
   color: var(--second-color);
   font-size: var(--normal);
+  height: 50px;
+  padding-top: 17px;
+  padding-right: 20px;
+  padding-left: 20px;
+  transition: background-color 300ms ease, transform 300ms ease;
+}
+body header nav ul li .nav-active:hover {
+  background-color: var(--hover);
+  transform: translateY(-3px) scale(1.1);
 }
 body main {
   width: 100%;
@@ -122,13 +133,18 @@ body main .systems figure {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  transition: transform 300ms ease;
   box-shadow: rgb(189, 189, 189) 1px 1px 10px;
+  cursor: pointer;
 }
 body main .systems figure figcaption {
   width: 100%;
   text-align: center;
   margin-top: 15px;
   font-size: var(--normal);
+}
+body main .systems .fig-active:hover {
+  transform: translateY(-3px) scale(1.1);
 }
 body main .about {
   max-width: 380px;
