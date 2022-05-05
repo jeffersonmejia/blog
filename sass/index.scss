@@ -56,6 +56,11 @@ body {
 					font-size: var(--normal);
 				}
 			}
+			@media (hover: hover) {
+				figure:hover {
+					transform: translateY(-3px) scale(1.1);
+				}
+			}
 		}
 		.about {
 			max-width: 380px;
@@ -77,61 +82,80 @@ body {
 			flex-wrap: wrap;
 			font-size: var(--normal);
 			box-shadow: 1px 1px 10px #bdbdbd;
-			h2 {
-				margin: 10px;
+			h3 {
 				text-align: center;
-				color: var(--main-color);
-				font-size: var(--x-large);
+				font-weight: 300;
 			}
 			label {
 				margin-bottom: 5px;
+				margin-top: 10px;
 			}
 			input {
 				padding-bottom: 5px;
 				width: 100%;
+				border: none;
+				border-bottom: var(--border);
+				margin-bottom: 5px;
+			}
+			input:focus {
+				border-bottom: 1px solid var(--active);
 			}
 			input,
 			textarea {
 				outline: none;
 			}
+			h5 {
+				font-weight: 300;
+				margin: 0;
+				color: var(--alert);
+			}
 			textarea {
 				padding: 5px 5px;
 				border: var(--border);
 			}
-			input {
-				border: none;
-				border-bottom: var(--border);
-				margin-bottom: 25px;
+			textarea:focus {
+				border: 1px solid var(--active);
 			}
 			textarea {
 				border-radius: var(--radius);
 				width: 100%;
 				font-family: var(--main-font);
 				font-size: var(--normal);
+				margin-bottom: 5px;
 			}
-			input[type="submit"] {
+			.submit-off {
 				height: 40px;
 				margin-top: 15px;
-				border: 1px solid var(--botton-text);
 				border-radius: var(--radius);
+				background-color: var(--not-allowed);
+				border: none;
+				color: var(--second-color);
+				cursor: not-allowed;
+				margin-bottom: 5px;
+			}
+			.submit-on {
+				//Pendiente, validar para activar submit
 				background-color: var(--botton-bg);
 				color: var(--botton-text);
+				border: 1px solid var(--botton-text);
+				transition: background-color 300ms ease, transform 300ms linear;
+				cursor: pointer;
+			}
+			@media (hover: hover) {
+				.submit-on:hover {
+					background-color: var(--hover);
+					color: var(--second-color);
+					border: none;
+				}
+			}
+			.submit-on:active {
+				transform: scale(1.1);
+				border: none;
 			}
 		}
 	}
 }
 @import "footer";
-@media (hover: hover) {
-	body {
-		main {
-			.systems {
-				figure:hover {
-					transform: translateY(-3px) scale(1.1);
-				}
-			}
-		}
-	}
-}
 @media screen and(min-width:768px) {
 	body {
 		main {

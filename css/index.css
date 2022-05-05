@@ -10,6 +10,9 @@
   --botton-bg: var(--second-color);
   --botton-text: #3554ff;
   --hover: #00137e;
+  --active: #7b8fff;
+  --not-allowed: rgb(150, 150, 150);
+  --alert: rgb(255, 55, 55);
   --container-width: 1200px;
   --border: 1px solid rgb(182, 182, 182);
   --radius: 10px;
@@ -88,9 +91,11 @@ body header nav ul li a {
   padding-left: 20px;
   transition: background-color 300ms ease, transform 300ms ease;
 }
-body header nav ul li .nav-active:hover {
-  background-color: var(--hover);
-  transform: translateY(-3px) scale(1.1);
+@media (hover: hover) {
+  body header nav ul li a:hover {
+    background-color: var(--hover);
+    transform: translateY(-3px) scale(1.1);
+  }
 }
 body main {
   width: 100%;
@@ -143,6 +148,11 @@ body main .systems figure figcaption {
   margin-top: 15px;
   font-size: var(--normal);
 }
+@media (hover: hover) {
+  body main .systems figure:hover {
+    transform: translateY(-3px) scale(1.1);
+  }
+}
 body main .about {
   max-width: 380px;
   padding: 15px;
@@ -164,45 +174,74 @@ body main .contact-us {
   font-size: var(--normal);
   box-shadow: 1px 1px 10px #bdbdbd;
 }
-body main .contact-us h2 {
-  margin: 10px;
+body main .contact-us h3 {
   text-align: center;
-  color: var(--main-color);
-  font-size: var(--x-large);
+  font-weight: 300;
 }
 body main .contact-us label {
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 body main .contact-us input {
   padding-bottom: 5px;
   width: 100%;
+  border: none;
+  border-bottom: var(--border);
+  margin-bottom: 5px;
+}
+body main .contact-us input:focus {
+  border-bottom: 1px solid var(--active);
 }
 body main .contact-us input,
 body main .contact-us textarea {
   outline: none;
 }
+body main .contact-us h5 {
+  font-weight: 300;
+  margin: 0;
+  color: var(--alert);
+}
 body main .contact-us textarea {
   padding: 5px 5px;
   border: var(--border);
 }
-body main .contact-us input {
-  border: none;
-  border-bottom: var(--border);
-  margin-bottom: 25px;
+body main .contact-us textarea:focus {
+  border: 1px solid var(--active);
 }
 body main .contact-us textarea {
   border-radius: var(--radius);
   width: 100%;
   font-family: var(--main-font);
   font-size: var(--normal);
+  margin-bottom: 5px;
 }
-body main .contact-us input[type=submit] {
+body main .contact-us .submit-off {
   height: 40px;
   margin-top: 15px;
-  border: 1px solid var(--botton-text);
   border-radius: var(--radius);
+  background-color: var(--not-allowed);
+  border: none;
+  color: var(--second-color);
+  cursor: not-allowed;
+  margin-bottom: 5px;
+}
+body main .contact-us .submit-on {
   background-color: var(--botton-bg);
   color: var(--botton-text);
+  border: 1px solid var(--botton-text);
+  transition: background-color 300ms ease, transform 300ms linear;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  body main .contact-us .submit-on:hover {
+    background-color: var(--hover);
+    color: var(--second-color);
+    border: none;
+  }
+}
+body main .contact-us .submit-on:active {
+  transform: scale(1.1);
+  border: none;
 }
 
 footer {
@@ -216,11 +255,6 @@ footer p {
   color: var(--second-color);
 }
 
-@media (hover: hover) {
-  body main .systems figure:hover {
-    transform: translateY(-3px) scale(1.1);
-  }
-}
 @media screen and (min-width: 768px) {
   body main .systems {
     display: grid;

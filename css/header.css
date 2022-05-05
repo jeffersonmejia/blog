@@ -43,9 +43,11 @@ header nav ul li a {
   padding-left: 20px;
   transition: background-color 300ms ease, transform 300ms ease;
 }
-header nav ul li .nav-active:hover {
-  background-color: var(--hover);
-  transform: translateY(-3px) scale(1.1);
+@media (hover: hover) {
+  header nav ul li a:hover {
+    background-color: var(--hover);
+    transform: translateY(-3px) scale(1.1);
+  }
 }
 
 /*# sourceMappingURL=header.css.map */

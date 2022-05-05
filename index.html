@@ -29,9 +29,9 @@
 			<nav>
 				<img src="./images/favicon.svg" width="40" />
 				<ul>
-					<li><a href="#" class="nav-active">Inicio</a></li>
-					<li><a href="#" class="nav-active">Contacto</a></li>
-					<li><a href="#" class="nav-active">Acerca de</a></li>
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#contact-us">Contacto</a></li>
+					<li><a href="#about">Acerca de</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -52,7 +52,7 @@
 				</figure>
 				<figure class="fig-unactive">
 					<img src="./images/sm.svg" width="300" />
-					<figcaption>Sistema de gestión</figcaption>
+					<figcaption id="about">Sistema de gestión</figcaption>
 				</figure>
 			</section>
 
@@ -65,24 +65,44 @@
 				</p>
 			</section>
 
-			<form class="contact-us">
-				<h2>Contáctanos</h2>
+			<form class="contact-us" id="contact-us">
+				<h3>Contáctanos</h3>
 				<label for="">Nombre</label>
-				<input type="text" placeholder="Ingresa tus dos nombres" />
+				<input
+					type="text"
+					placeholder="Ingresa tus dos nombres"
+					class="input"
+					id="name"
+				/>
+				<h5 id="alert-name"></h5>
+
 				<label for="">Apellido</label>
-				<input type="text" placeholder="Ingresa tus dos apellidos" />
+				<input
+					type="text"
+					placeholder="Ingresa tus dos apellidos"
+					class="input"
+					id="lastname"
+				/>
+				<h5 id="alert-lastname"></h5>
+
 				<label for="">Asunto</label>
 				<textarea
 					cols="30"
 					rows="10"
 					placeholder="Redacta de manera breve el asunto"
+					class="input"
+					id="topic"
 				></textarea>
-				<input type="submit" value="Enviar" />
+				<h5 id="alert-topic"></h5>
+
+				<input type="submit" value="Enviar" class="submit-on submit-off" />
+				<h5 id="alert-submit"></h5>
 			</form>
 		</main>
 		<footer>
-			<p>Actualmente en la versión 2.0</p>
 			<p>Sitio desarrollado por Jefferson Mejía | 2022</p>
+			<p>Actualmente en la versión 2.0</p>
+			<p>Feedback: jeffersonmejiach01@gmail.com</p>
 		</footer>
 		<script src="./js/index.js"></script>
 	</body>
