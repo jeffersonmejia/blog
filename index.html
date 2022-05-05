@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
+		<!-- MAIN CONFIG -->
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!--SEO  -->
-		<meta name="description" content="Jefferson Mejía: Blog de desarrollo web frontend" />
-		<meta name="keywords" content="HTML, CSS, JavaScript, Jefferson" />
+		<meta name="description" content="Jefferson Mejía: Blog Universitario" />
+		<meta name="keywords" content="Universitario, blog, Jefferson" />
 
 		<link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
 		<title>Blog | Inicio</title>
@@ -24,86 +25,93 @@
 	</head>
 
 	<body>
+		<!-- HEADER -->
 		<header>
 			<nav>
-				<li class="logo"><img src="./images/favicon.svg" alt="logo" />
-					<h5 class="logo-text">Universidad Técnica</h5>
-				</li>
-				<ul class="container">
-				
-					<li class="item home"><a href="#home">Inicio</a></li>
-					<li class="item contact"><a href="#contact-us">Contactar</a></li>
-					<li class="item about"><a href="#about">Acerca de</a></li>
+				<img src="./images/favicon.svg" width="40" />
+				<ul>
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#contact-us">Contacto</a></li>
+					<li><a href="#about">Acerca de</a></li>
 				</ul>
 			</nav>
 		</header>
-
+		<!-- MAIN -->
 		<main>
-			<div class="behind-nav" id="home"></div>
-			<div class="container">
-				<div class="day-container" >
-					<figure>
-						<img src="./images/vector-1.svg" alt="vector" class="vector vector-1" />
-						<figcaption>Las matrículas se habilitan a partir del 16 de abril</figcaption>
-					</figure>
-
-					<figure>
-						<img src="./images/vector-2.svg" alt="vector" class="vector vector-2" />
-						<figcaption></figcaption>
-					</figure>
-				</div>
-				<section class="systems">
-					<figure class="container">
-						<figcaption>Aula virtual</figcaption>
-						<img src="./images/av.svg" alt="" />
-					</figure>
-
-					<figure class="container">
-						<figcaption>Sistema de gestión</figcaption>
-						<img src="./images/sg.svg" alt="" />
-					</figure>
-
-					<figure class="container last" id="about">
-						<figcaption>Sistema de planificación</figcaption>
-						<img src="./images/sm.svg" alt="" />
-					</figure>
-				</section>
+			<!-- LOADER TO PREVENT BUGS -->
+			<div class="loader" id="loader">
+				<div></div>
 			</div>
-			<p class="about" >
-				<i>"El presente blog universitario es una guía de cómo se deben utilizar las
-				plataformas académicas que ofrece la institución. Los manuales cuentan con guías
-				específicas que detallan desde lo más básico hasta lo más avanzado. Todo esto con
-				el fin de que la comunidad universitaria pueda acceder de manera equitativa a los
-				servicios que disponemos."</i></p>
-			</p>
-			<figure class="contact-us" id="contact-us">
-				<figcaption class="title">Contáctanos</figcaption>
-				<form action="" id="form">
-					<label for="">Nombres*</label>
-					<input type="text" placeholder="Escribe tus nombres completos" id="name" class="input" autocomplete="off"/>
-					<h5 class="in-alert" id="alert-name"></h5>
+			<!-- MAIN BANNER ON TOP -->
+			<section class="news">
+				<figure>
+					<img src="./images/vector-1.svg" width="300" />
+					<figcaption>Matriculas habilitadas a partir del 16 de abril</figcaption>
+				</figure>
+			</section>
+			<!-- SYSTEMS MANUAL -->
+			<section class="systems">
+				<h1>Sistemas académicos</h1>
+				<figure class="fig-unactive first-child">
+					<img src="./images/sg.svg" width="300" />
+					<figcaption>Sistema de inscripciones</figcaption>
+				</figure>
+				<figure class="fig-unactive">
+					<img src="./images/sm.svg" width="300" />
+					<figcaption id="about">Sistema de gestión</figcaption>
+				</figure>
+			</section>
+			<!-- EXTRA -->
+			<section class="about">
+				<p>
+					<i
+						>El presente blog universitario da a conocer los manuales para el uso de los
+						sistemas académicos de la institución</i
+					>
+				</p>
+			</section>
+			<!-- TO SEND MAILS-->
+			<form class="contact-us" id="contact-us">
+				<h3>Contáctanos</h3>
+				<label for="">Nombre</label>
+				<input
+					type="text"
+					placeholder="Ingresa tus dos nombres"
+					class="input"
+					id="name"
+				/>
+				<h5 id="alert-name"></h5>
 
-					<label for="">Apellidos*</label>
-					<input type="text" placeholder="Escribe tus apellidos completos" id="lastname" class="input" autocomplete="off"/>
-					<h5 class="in-alert" id="alert-lastname"></h5>
+				<label for="">Apellido</label>
+				<input
+					type="text"
+					placeholder="Ingresa tus dos apellidos"
+					class="input"
+					id="lastname"
+				/>
+				<h5 id="alert-lastname"></h5>
 
-					<label for="">Asunto*</label>
-					<textarea
-						class="topic input"
-						id="topic"
-						cols="30"
-						rows="10"
-						placeholder="Describe tu inquietud"
-					></textarea >
-					<input type="submit" value="Enviar" class="submit" id="submit" />
-					<h5 class="alert-alert" id="alert-submit"></h5>
-				</form>
-			</figure>
+				<label for="">Asunto</label>
+				<textarea
+					cols="30"
+					rows="10"
+					placeholder="Redacta de manera breve el asunto"
+					class="input"
+					id="topic"
+				></textarea>
+				<h5 id="alert-topic"></h5>
+
+				<input type="submit" value="Enviar" class="submit-off" />
+				<h5 id="alert-submit"></h5>
+			</form>
 		</main>
-
 		<footer>
-			<p class="footer-text">Sitio desarrollado por Jefferson Mejía | 2022</p>
+			<!-- CREDITS AND VERSION -->
+			<p>Sitio desarrollado por Jefferson Mejía | 2022</p>
+			<p>Actualmente en la versión 2.0</p>
+			<p>Feedback: jeffersonmejiach01@gmail.com</p>
 		</footer>
-		<script src="./js/app.js"></script>
+		<!-- SCRIPT -->
+		<script src="./js/index.js"></script>
 	</body>
 </html>

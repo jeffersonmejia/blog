@@ -1,13 +1,10 @@
 footer {
-	background-color: $color-primary;
-	height: 50px;
 	width: 100%;
-	display: grid;
-	place-items: center;
+	background-color: var(--main-color);
+	margin-top: 30px;
 	p {
-		color: $main-bg-color;
-		font-family: "Poppins", sans-serif;
+		font-size: var(--small);
 		text-align: center;
-		font-size: $sm;
+		color: var(--second-color);
 	}
 }
