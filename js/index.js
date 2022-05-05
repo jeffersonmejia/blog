@@ -1,11 +1,11 @@
 const d = document;
-
+// Set 1 to enable, 0 to disable
 let appConfig = {
 	loader: 1,
 };
-
+// Prevent load bugs
 const $loader = document.querySelector("main .loader");
-
+// Validations on contact
 const $formEl = {
 	$form: d.querySelector("form"),
 	$input: d.querySelectorAll(".input"),
@@ -47,7 +47,7 @@ const alerts = {
 	topic: "El asunto debe contener mínimo 32 carácteres",
 	submit: "Solicitud enviada correctamente",
 };
-
+// Start loader when page load
 window.addEventListener("load", () => {
 	if (appConfig.loader === 1) {
 		$loader.classList.toggle("loader-on");
@@ -56,7 +56,7 @@ window.addEventListener("load", () => {
 		}, 3000);
 	}
 });
-
+// Verify form before send to backend
 $formEl.$form.addEventListener(
 	"keyup",
 	(e) => {
@@ -106,16 +106,16 @@ $formEl.$form.addEventListener(
 	},
 	true
 );
-
+// Enable submit when there is not blank inputs
 $formEl.$input.forEach((el) => {
 	el.addEventListener("blur", () => {
-		//MEJORAR ESTOS CONDICIONALES, PENDIENTE
+		//This could be improved
 		if (fill.name === true && fill.lastname === true && fill.topic === true) {
 			$formEl.$submit.classList.toggle("submit-on");
 		}
 	});
 });
-
+// Check if form was sent
 $formEl.$form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	if (fill.name === true && fill.lastname === true && fill.topic === true) {

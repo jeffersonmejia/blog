@@ -8,6 +8,7 @@ body {
 	@import "header";
 	main {
 		width: 100%;
+		// BANNER ON TOP
 		.news {
 			figure {
 				display: flex;
@@ -28,6 +29,7 @@ body {
 				}
 			}
 		}
+		// MANUAL GRID
 		.systems {
 			display: flex;
 			flex-direction: column;
@@ -72,6 +74,7 @@ body {
 				font-size: var(--normal);
 			}
 		}
+		// FORM CLASS TO ACTIVE IN JS
 		.contact-us {
 			max-width: 348px;
 			width: 80%;
@@ -160,6 +163,7 @@ body {
 	}
 }
 @import "footer";
+// BREAKPOINT
 @media screen and(min-width:768px) {
 	body {
 		main {
