@@ -143,9 +143,6 @@ body main .systems figure figcaption {
   margin-top: 15px;
   font-size: var(--normal);
 }
-body main .systems .fig-active:hover {
-  transform: translateY(-3px) scale(1.1);
-}
 body main .about {
   max-width: 380px;
   padding: 15px;
@@ -219,6 +216,11 @@ footer p {
   color: var(--second-color);
 }
 
+@media (hover: hover) {
+  body main .systems figure:hover {
+    transform: translateY(-3px) scale(1.1);
+  }
+}
 @media screen and (min-width: 768px) {
   body main .systems {
     display: grid;

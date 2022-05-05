@@ -56,9 +56,6 @@ body {
 					font-size: var(--normal);
 				}
 			}
-			.fig-active:hover {
-				transform: translateY(-3px) scale(1.1);
-			}
 		}
 		.about {
 			max-width: 380px;
@@ -124,6 +121,17 @@ body {
 	}
 }
 @import "footer";
+@media (hover: hover) {
+	body {
+		main {
+			.systems {
+				figure:hover {
+					transform: translateY(-3px) scale(1.1);
+				}
+			}
+		}
+	}
+}
 @media screen and(min-width:768px) {
 	body {
 		main {
