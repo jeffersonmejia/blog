@@ -131,10 +131,9 @@ body {
 				border: none;
 				color: var(--second-color);
 				cursor: not-allowed;
-				margin-bottom: 5px;
+				margin-bottom: 15px;
 			}
 			.submit-on {
-				//Pendiente, validar para activar submit
 				background-color: var(--botton-bg);
 				color: var(--botton-text);
 				border: 1px solid var(--botton-text);
@@ -151,6 +150,10 @@ body {
 			.submit-on:active {
 				transform: scale(1.1);
 				border: none;
+			}
+			.submit-send {
+				text-align: center;
+				color: var(--sucessful);
 			}
 		}
 	}

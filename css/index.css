@@ -13,6 +13,7 @@
   --active: #7b8fff;
   --not-allowed: rgb(150, 150, 150);
   --alert: rgb(255, 55, 55);
+  --sucessful: rgb(0, 163, 43);
   --container-width: 1200px;
   --border: 1px solid rgb(182, 182, 182);
   --radius: 10px;
@@ -223,7 +224,7 @@ body main .contact-us .submit-off {
   border: none;
   color: var(--second-color);
   cursor: not-allowed;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 body main .contact-us .submit-on {
   background-color: var(--botton-bg);
@@ -242,6 +243,10 @@ body main .contact-us .submit-on {
 body main .contact-us .submit-on:active {
   transform: scale(1.1);
   border: none;
+}
+body main .contact-us .submit-send {
+  text-align: center;
+  color: var(--sucessful);
 }
 
 footer {

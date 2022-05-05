@@ -3,7 +3,7 @@ const d = document;
 const $formEl = {
 	$form: d.querySelector("form"),
 	$input: d.querySelectorAll(".input"),
-	$submit: d.querySelector("form .submit-on"),
+	$submit: d.querySelector("form .submit-off"),
 	$alert: {
 		$name: d.querySelector("form #alert-name"),
 		$lastname: d.querySelector("form #alert-lastname"),
@@ -39,6 +39,7 @@ const alerts = {
 		second: "Ahora ingresa tu segundo apellido",
 	},
 	topic: "El asunto debe contener mínimo 32 carácteres",
+	submit: "Solicitud enviada correctamente",
 };
 
 $formEl.$form.addEventListener(
@@ -55,8 +56,7 @@ $formEl.$form.addEventListener(
 							$formEl.$alert.$name.innerHTML = alerts.name.second;
 						} else {
 							$formEl.$alert.$name.innerHTML = "";
-
-							// fill.name = true;
+							fill.name = true;
 						}
 					}
 				}
@@ -72,6 +72,7 @@ $formEl.$form.addEventListener(
 							$formEl.$alert.$lastname.innerHTML = alerts.lastname.second;
 						} else {
 							$formEl.$alert.$lastname.innerHTML = "";
+							fill.lastname = true;
 						}
 					}
 				}
@@ -82,19 +83,33 @@ $formEl.$form.addEventListener(
 					$formEl.$alert.$topic.innerHTML = alerts.topic;
 				} else {
 					$formEl.$alert.$topic.innerHTML = "";
+					fill.topic = true;
 				}
 				break;
 			}
-		}
-		if (fill.name === true) {
-			$formEl.$submit.classList.toggle("submit-on");
 		}
 	},
 	true
 );
 
-$formEl.$form.addEventListener;
+$formEl.$input.forEach((el) => {
+	el.addEventListener("blur", () => {
+		//MEJORAR ESTOS CONDICIONALES, PENDIENTE
+		if (fill.name === true && fill.lastname === true && fill.topic === true) {
+			$formEl.$submit.classList.toggle("submit-on");
+		}
+	});
+});
 
 $formEl.$form.addEventListener("submit", (e) => {
 	e.preventDefault();
+	if (fill.name === true && fill.lastname === true && fill.topic === true) {
+		$formEl.$alert.$submit.classList.toggle("submit-send");
+		$formEl.$alert.$submit.innerHTML = alerts.submit;
+		setTimeout(() => {
+			$formEl.$alert.$submit.innerHTML = "";
+			$formEl.$alert.$submit.classList.remove("submit-send");
+			$formEl.$form.reset();
+		}, 3000);
+	}
 });
