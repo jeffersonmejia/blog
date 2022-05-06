@@ -125,5 +125,11 @@ body header nav ul li a {
     transform: translateY(-3px) scale(1.1);
   }
 }
+body main p {
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-left: 15px;
+}
 
 /*# sourceMappingURL=inscriptions.css.map */

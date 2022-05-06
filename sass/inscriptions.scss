@@ -2,4 +2,13 @@
 body {
 	@import "loader";
 	@import "header";
+	main {
+		// DELETE AFTER DEPLOYMENT
+		p {
+			text-align: center;
+			width: 100%;
+			display: block;
+			margin-left: 15px;
+		}
+	}
 }
