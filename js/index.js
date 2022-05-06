@@ -1,10 +1,7 @@
+import { startLoader } from "./loader.js";
+startLoader();
+
 const d = document;
-// Set 1 to enable, 0 to disable
-let appConfig = {
-	loader: 1,
-};
-// Prevent load bugs
-const $loader = document.querySelector("main .loader");
 // Validations on contact
 const $formEl = {
 	$form: d.querySelector("form"),
@@ -47,15 +44,6 @@ const alerts = {
 	topic: "El asunto debe contener mínimo 32 carácteres",
 	submit: "Solicitud enviada correctamente",
 };
-// Start loader when page load
-window.addEventListener("load", () => {
-	if (appConfig.loader === 1) {
-		$loader.classList.toggle("loader-on");
-		setTimeout(() => {
-			$loader.classList.remove("loader-on");
-		}, 3000);
-	}
-});
 // Verify form before send to backend
 $formEl.$form.addEventListener(
 	"keyup",

@@ -37,6 +37,9 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 img {
@@ -44,11 +47,6 @@ img {
   height: auto;
 }
 
-body {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
 @keyframes loader {
   0% {
     transform: rotate(0deg);
@@ -161,7 +159,10 @@ body main .systems h1 {
   color: var(--main-color);
   font-size: var(--medium);
 }
-body main .systems figure {
+body main .systems a {
+  text-decoration: none;
+}
+body main .systems a figure {
   max-width: 288px;
   border-radius: var(--radius);
   padding: 15px;
@@ -171,15 +172,16 @@ body main .systems figure {
   transition: transform 300ms ease;
   box-shadow: rgb(189, 189, 189) 1px 1px 10px;
   cursor: pointer;
+  color: var(--main-color);
 }
-body main .systems figure figcaption {
+body main .systems a figure figcaption {
   width: 100%;
   text-align: center;
   margin-top: 15px;
   font-size: var(--normal);
 }
 @media (hover: hover) {
-  body main .systems figure:hover {
+  body main .systems a figure:hover {
     transform: translateY(-3px) scale(1.1);
   }
 }

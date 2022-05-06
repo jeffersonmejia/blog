@@ -1,0 +1,129 @@
+:root {
+  --main-font: "Poppins", sans-serif;
+  --font-size: 16px;
+  --small: 0.7em;
+  --normal: 0.8em;
+  --medium: 1.2em;
+  --large: 1.6em;
+  --main-color: #000e5c;
+  --second-color: #fff;
+  --botton-bg: var(--second-color);
+  --botton-text: #3554ff;
+  --hover: #00137e;
+  --active: #7b8fff;
+  --not-allowed: rgb(150, 150, 150);
+  --alert: rgb(255, 55, 55);
+  --sucessful: rgb(0, 163, 43);
+  --transparent: rgb(255, 255, 255, 0.5);
+  --loader: #4d67ff;
+  --container-width: 1200px;
+  --border: 1px solid rgb(182, 182, 182);
+  --radius: 10px;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body .loader-on {
+  background-color: var(--transparent);
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .loader-on div {
+  background-color: var(--second-color);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 7px solid var(--main-color);
+  border-top: 7px solid var(--loader);
+  animation: loader 1s infinite;
+}
+body header {
+  top: 0;
+  width: 100%;
+  height: 50px;
+  position: sticky;
+  background-color: var(--main-color);
+}
+body header nav {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  place-content: center;
+  height: 100%;
+  box-shadow: rgb(189, 189, 189) 1px 1px 10px;
+}
+body header nav img {
+  width: 40px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+body header nav ul {
+  list-style: none;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-self: right;
+}
+body header nav ul li {
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+body header nav ul li a {
+  text-decoration: none;
+  color: var(--second-color);
+  font-size: var(--normal);
+  height: 50px;
+  padding-top: 17px;
+  padding-right: 20px;
+  padding-left: 20px;
+  transition: background-color 300ms ease, transform 300ms ease;
+}
+@media (hover: hover) {
+  body header nav ul li a:hover {
+    background-color: var(--hover);
+    transform: translateY(-3px) scale(1.1);
+  }
+}
+
+/*# sourceMappingURL=inscriptions.css.map */

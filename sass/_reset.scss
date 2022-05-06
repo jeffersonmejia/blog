@@ -40,6 +40,10 @@ html {
 body {
 	margin: 0;
 	overflow-x: hidden;
+	//TO FIX FOOTER ON BOTTOM
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 img {

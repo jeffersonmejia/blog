@@ -2,9 +2,6 @@
 
 body {
 	@import "loader";
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
 	@import "header";
 	main {
 		width: 100%;
@@ -42,26 +39,30 @@ body {
 				color: var(--main-color);
 				font-size: var(--medium);
 			}
-			figure {
-				max-width: 288px;
-				border-radius: var(--radius);
-				padding: 15px;
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
-				transition: transform 300ms ease;
-				box-shadow: rgb(189, 189, 189) 1px 1px 10px;
-				cursor: pointer;
-				figcaption {
-					width: 100%;
-					text-align: center;
-					margin-top: 15px;
-					font-size: var(--normal);
+			a {
+				text-decoration: none;
+				figure {
+					max-width: 288px;
+					border-radius: var(--radius);
+					padding: 15px;
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					transition: transform 300ms ease;
+					box-shadow: rgb(189, 189, 189) 1px 1px 10px;
+					cursor: pointer;
+					color: var(--main-color);
+					figcaption {
+						width: 100%;
+						text-align: center;
+						margin-top: 15px;
+						font-size: var(--normal);
+					}
 				}
-			}
-			@media (hover: hover) {
-				figure:hover {
-					transform: translateY(-3px) scale(1.1);
+				@media (hover: hover) {
+					figure:hover {
+						transform: translateY(-3px) scale(1.1);
+					}
 				}
 			}
 		}
