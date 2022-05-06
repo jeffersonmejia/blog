@@ -39,30 +39,31 @@ body {
 				color: var(--main-color);
 				font-size: var(--medium);
 			}
-			a {
-				text-decoration: none;
-				figure {
-					max-width: 288px;
-					border-radius: var(--radius);
-					padding: 15px;
-					display: flex;
-					flex-direction: row;
-					flex-wrap: wrap;
-					transition: transform 300ms ease;
-					box-shadow: rgb(189, 189, 189) 1px 1px 10px;
-					cursor: pointer;
+			figure {
+				max-width: 288px;
+				border-radius: var(--radius);
+				padding: 15px;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				transition: transform 300ms ease;
+				box-shadow: rgb(189, 189, 189) 1px 1px 10px;
+				cursor: pointer;
+				color: var(--main-color);
+				a {
+					text-decoration: none;
 					color: var(--main-color);
-					figcaption {
-						width: 100%;
-						text-align: center;
-						margin-top: 15px;
-						font-size: var(--normal);
-					}
 				}
-				@media (hover: hover) {
-					figure:hover {
-						transform: translateY(-3px) scale(1.1);
-					}
+				figcaption {
+					width: 100%;
+					text-align: center;
+					margin-top: 15px;
+					font-size: var(--normal);
+				}
+			}
+			@media (hover: hover) {
+				figure:hover {
+					transform: translateY(-3px) scale(1.1);
 				}
 			}
 		}
@@ -133,7 +134,6 @@ body {
 				margin-top: 15px;
 				border-radius: var(--radius);
 				background-color: var(--not-allowed);
-				border: none;
 				color: var(--second-color);
 				cursor: not-allowed;
 				margin-bottom: 15px;

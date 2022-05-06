@@ -42,7 +42,10 @@ const alerts = {
 		second: "Ahora ingresa tu segundo apellido",
 	},
 	topic: "El asunto debe contener mínimo 32 carácteres",
-	submit: "Solicitud enviada correctamente",
+	submit: {
+		accepted: "Solicitud enviada correctamente",
+		denied: "Primero llena los campos, por favor",
+	},
 };
 // Verify form before send to backend
 $formEl.$form.addEventListener(
@@ -108,11 +111,17 @@ $formEl.$form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	if (fill.name === true && fill.lastname === true && fill.topic === true) {
 		$formEl.$alert.$submit.classList.toggle("submit-send");
-		$formEl.$alert.$submit.innerHTML = alerts.submit;
+		$formEl.$alert.$submit.innerHTML = alerts.submit.accepted;
+		fill.name = false;
+		fill.lastname = false;
+		fill.topic = false;
 		setTimeout(() => {
 			$formEl.$alert.$submit.innerHTML = "";
 			$formEl.$alert.$submit.classList.remove("submit-send");
 			$formEl.$form.reset();
+			$formEl.$submit.classList.remove("submit-on");
 		}, 3000);
+	} else {
+		$formEl.$alert.$submit.innerHTML = alerts.submit.denied;
 	}
 });

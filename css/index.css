@@ -159,10 +159,7 @@ body main .systems h1 {
   color: var(--main-color);
   font-size: var(--medium);
 }
-body main .systems a {
-  text-decoration: none;
-}
-body main .systems a figure {
+body main .systems figure {
   max-width: 288px;
   border-radius: var(--radius);
   padding: 15px;
@@ -174,14 +171,18 @@ body main .systems a figure {
   cursor: pointer;
   color: var(--main-color);
 }
-body main .systems a figure figcaption {
+body main .systems figure a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+body main .systems figure figcaption {
   width: 100%;
   text-align: center;
   margin-top: 15px;
   font-size: var(--normal);
 }
 @media (hover: hover) {
-  body main .systems a figure:hover {
+  body main .systems figure:hover {
     transform: translateY(-3px) scale(1.1);
   }
 }
@@ -252,7 +253,6 @@ body main .contact-us .submit-off {
   margin-top: 15px;
   border-radius: var(--radius);
   background-color: var(--not-allowed);
-  border: none;
   color: var(--second-color);
   cursor: not-allowed;
   margin-bottom: 15px;
