@@ -53,12 +53,12 @@ body {
 				a {
 					text-decoration: none;
 					color: var(--main-color);
-				}
-				figcaption {
-					width: 100%;
-					text-align: center;
-					margin-top: 15px;
-					font-size: var(--normal);
+					figcaption {
+						width: 100%;
+						text-align: center;
+						margin-top: 15px;
+						font-size: var(--normal);
+					}
 				}
 			}
 			@media (hover: hover) {

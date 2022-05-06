@@ -175,7 +175,7 @@ body main .systems figure a {
   text-decoration: none;
   color: var(--main-color);
 }
-body main .systems figure figcaption {
+body main .systems figure a figcaption {
   width: 100%;
   text-align: center;
   margin-top: 15px;
