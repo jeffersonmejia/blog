@@ -1,3 +1,3 @@
 export const appConfig = {
-	loader: 0,
+	loader: 1,
 };
