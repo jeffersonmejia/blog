@@ -125,11 +125,15 @@ body header nav ul li a {
     transform: translateY(-3px) scale(1.1);
   }
 }
-body main p {
-  text-align: center;
+body main .grid {
+  border: var(--border);
   width: 100%;
-  display: block;
-  margin-left: 15px;
+}
+body main .grid figure {
+  border: var(--border);
+}
+body main .grid figure figcaption {
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=inscriptions.css.map */

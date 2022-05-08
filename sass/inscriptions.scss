@@ -3,12 +3,20 @@ body {
 	@import "loader";
 	@import "header";
 	main {
-		// DELETE AFTER DEPLOYMENT
-		p {
-			text-align: center;
+		.grid {
+			border: var(--border);
 			width: 100%;
-			display: block;
-			margin-left: 15px;
+			figure {
+				border: var(--border);
+				background-color: red;
+				img {
+					width: 50px;
+				}
+				figcaption {
+					margin-top: 10px;
+					color: red;
+				}
+			}
 		}
 	}
 }
