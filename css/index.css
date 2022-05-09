@@ -7,6 +7,8 @@
   --large: 1.6em;
   --main-color: #000e5c;
   --second-color: #fff;
+  --third-color: #000;
+  --bg-color: #eeeeee;
   --botton-bg: var(--second-color);
   --botton-text: #3554ff;
   --hover: #00137e;
@@ -47,6 +49,9 @@ img {
   height: auto;
 }
 
+body {
+  background-color: var(--bg-color);
+}
 @keyframes loader {
   0% {
     transform: rotate(0deg);
@@ -127,25 +132,22 @@ body header nav ul li a {
   }
 }
 body main {
-  width: 100%;
+  background-color: var(--bg-color);
+}
+body main .news {
+  background-color: var(--second-color);
+  width: 100vw;
 }
 body main .news figure {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 100vw;
+  margin: 0;
+  padding: 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  column-gap: 60px;
 }
 body main .news figure img {
-  max-width: 320px;
-  margin: auto;
-}
-body main .news figure figcaption {
-  width: 100%;
-  padding-bottom: 15px;
-  text-align: center;
-  font-size: var(--large);
-  font-weight: 600;
-  color: var(--main-color);
-  border-bottom: var(--border);
+  max-height: 200px;
 }
 body main .systems {
   display: flex;
@@ -161,6 +163,7 @@ body main .systems h1 {
   font-size: var(--medium);
 }
 body main .systems figure {
+  background-color: var(--second-color);
   max-width: 288px;
   border-radius: var(--radius);
   padding: 15px;
@@ -197,6 +200,7 @@ body main .about p {
   font-size: var(--normal);
 }
 body main .contact-us {
+  background-color: var(--second-color);
   max-width: 348px;
   width: 80%;
   margin: auto;

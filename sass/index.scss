@@ -1,28 +1,24 @@
 @import "reset";
 
 body {
+	background-color: var(--bg-color);
 	@import "loader";
 	@import "header";
 	main {
-		width: 100%;
+		background-color: var(--bg-color);
 		// BANNER ON TOP
 		.news {
+			background-color: var(--second-color);
+			width: 100vw;
 			figure {
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
+				width: 100vw;
+				margin: 0;
+				padding: 20px 40px;
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+				column-gap: 60px;
 				img {
-					max-width: 320px;
-					margin: auto;
-				}
-				figcaption {
-					width: 100%;
-					padding-bottom: 15px;
-					text-align: center;
-					font-size: var(--large);
-					font-weight: 600;
-					color: var(--main-color);
-					border-bottom: var(--border);
+					max-height: 200px;
 				}
 			}
 		}
@@ -40,6 +36,7 @@ body {
 				font-size: var(--medium);
 			}
 			figure {
+				background-color: var(--second-color);
 				max-width: 288px;
 				border-radius: var(--radius);
 				padding: 15px;
@@ -78,6 +75,7 @@ body {
 		}
 		// FORM CLASS TO ACTIVE IN JS
 		.contact-us {
+			background-color: var(--second-color);
 			max-width: 348px;
 			width: 80%;
 			margin: auto;

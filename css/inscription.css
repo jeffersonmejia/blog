@@ -7,6 +7,8 @@
   --large: 1.6em;
   --main-color: #000e5c;
   --second-color: #fff;
+  --third-color: #000;
+  --bg-color: #eeeeee;
   --botton-bg: var(--second-color);
   --botton-text: #3554ff;
   --hover: #00137e;
@@ -201,4 +203,4 @@ footer p {
   }
 }
 
-/*# sourceMappingURL=inscriptions.css.map */
+/*# sourceMappingURL=inscription.css.map */
