@@ -6,6 +6,12 @@ import { startLoader } from "./loader.js";
 startLoader();
 
 const d = document;
+//! Header mobile
+const $nav = {
+	$menu: document.querySelector("#menu"),
+	$bar: document.querySelector("#bar"),
+};
+console.log($nav);
 // Validations on contact
 const $formEl = {
 	$form: d.querySelector("form"),
@@ -51,6 +57,10 @@ const alerts = {
 		denied: "Primero llena los campos, por favor",
 	},
 };
+//!Active nav
+$nav.$menu.addEventListener("click", () => {
+	$nav.$bar.classList.toggle("bar-on");
+});
 // Verify form before send to backend
 $formEl.$form.addEventListener(
 	"keyup",
@@ -101,7 +111,7 @@ $formEl.$form.addEventListener(
 	},
 	true
 );
-// Enable submit when there is not blank inputs
+//! Enable submit when there is not blank inputs
 $formEl.$input.forEach((el) => {
 	el.addEventListener("blur", () => {
 		//This could be improved

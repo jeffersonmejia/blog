@@ -49,57 +49,6 @@ img {
   height: auto;
 }
 
-body {
-  /*	nav {
-  		display: grid;
-  		grid-template-columns: auto 1fr;
-  		place-content: center;
-  		height: 100%;
-  		box-shadow: rgb(189, 189, 189) 1px 1px 10px;
-  		img {
-  			width: 30px;
-  			max-width: 30px;
-  			margin-left: 15px;
-  			padding-top: 10px;
-  		}
-  		ul {
-  			list-style: none;
-  			height: 50px;
-  			margin: 0;
-  			padding: 0;
-  			display: flex;
-  			flex-direction: row;
-  			flex-wrap: wrap;
-  			justify-self: right;
-
-  			li {
-  				width: max-content;
-  				display: flex;
-  				flex-direction: row;
-  				flex-wrap: wrap;
-  				a {
-  					text-decoration: none;
-  					color: var(--second-color);
-  					font-size: var(--normal);
-  					height: 50px;
-  					padding-top: 17px;
-  					padding-right: 20px;
-  					padding-left: 20px;
-  					transition: background-color 300ms ease, transform 300ms ease;
-  				}
-  				@media (hover: hover) {
-  					a:hover {
-  						background-color: var(--hover);
-  						transform: translateY(-3px) scale(1.1);
-  					}
-  				}
-  			}
-  			.menu {
-  				color: var(--second-color);
-  			}
-  		}
-  	}*/
-}
 @keyframes loader {
   0% {
     transform: rotate(0deg);
