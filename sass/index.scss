@@ -11,7 +11,7 @@ body {
 	}
 	main {
 		background-color: var(--bg-color);
-		// BANNER ON TOP
+		//! BANNER ON TOP
 		.news {
 			background-color: var(--second-color);
 			width: 100vw;
@@ -21,7 +21,7 @@ body {
 				overflow: hidden;
 			}
 		}
-		// MANUAL GRID
+		//! MANUAL GRID
 		.systems {
 			display: flex;
 			flex-direction: column;
@@ -76,7 +76,7 @@ body {
 				color: var(--third-color);
 			}
 		}
-		// FORM CLASS TO ACTIVE IN JS
+		//! FORM TO SEND EMAILS
 		.contact-us {
 			background-color: var(--second-color);
 			max-width: 348px;
@@ -171,7 +171,7 @@ body {
 	}
 }
 @import "footer";
-// BREAKPOINT
+//! BREAKPOINT
 @media screen and(min-width:768px) {
 	body {
 		main {

@@ -1,12 +1,12 @@
 :root {
 	--main-font: "Open Sans", sans-serif;
-
+	//!FONT
 	--font-size: 16px;
 	--small: 0.7em;
 	--normal: 0.8em;
 	--medium: 1.2em;
 	--large: 1.6em;
-
+	//!COLOR
 	--main-color: #000e5c;
 	--second-color: #fff;
 	--third-color: #8f8f8f;
@@ -20,9 +20,9 @@
 	--sucessful: rgb(0, 163, 43);
 	--transparent: rgb(255, 255, 255, 0.5);
 	--loader: #4d67ff;
-
+	//!CONTAINER
 	--container-width: 1200px;
-
+	//!BOX-MODEL
 	--border: 1px solid rgb(182, 182, 182);
 	--radius: 10px;
 }
@@ -43,7 +43,7 @@ html {
 body {
 	margin: 0;
 	overflow-x: hidden;
-	//TO FIX FOOTER ON BOTTOM
+	//* TO FIX FOOTER ON BOTTOM
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
