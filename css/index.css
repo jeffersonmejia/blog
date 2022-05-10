@@ -106,6 +106,7 @@ body header nav .menu {
   justify-self: flex-end;
   margin-right: 15px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 body header nav .bar-off {
   display: none;
@@ -129,6 +130,9 @@ body header nav .bar-on li a {
   color: var(--second-color);
   font-size: var(--normal);
 }
+body header nav {
+  box-shadow: none;
+}
 body main {
   background-color: var(--bg-color);
 }
@@ -137,15 +141,9 @@ body main .news {
   width: 100vw;
 }
 body main .news figure {
-  width: 100vw;
   margin: 0;
-  padding: 20px 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-  column-gap: 60px;
-}
-body main .news figure img {
-  max-height: 300px;
+  max-height: 280px;
+  overflow: hidden;
 }
 body main .systems {
   display: flex;
@@ -160,7 +158,8 @@ body main .systems h1 {
   color: var(--third-color);
   font-size: var(--medium);
   margin: 0;
-  margin-top: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 body main .systems figure {
   background-color: var(--second-color);
@@ -264,30 +263,24 @@ body main .contact-us textarea {
   margin-bottom: 5px;
   border: 1px solid var(--third-color);
 }
-body main .contact-us .submit-off {
+body main .contact-us .submit {
   height: 40px;
   margin-top: 15px;
   border-radius: var(--radius);
-  background-color: var(--not-allowed);
-  color: var(--second-color);
-  cursor: not-allowed;
-  margin-bottom: 15px;
-}
-body main .contact-us .submit-on {
   background-color: var(--botton-bg);
   color: var(--botton-text);
-  border: 1px solid var(--botton-text);
-  transition: background-color 300ms ease, transform 300ms linear;
   cursor: pointer;
+  border: 1px solid var(--botton-text);
+  transition: transform 300ms linear;
 }
 @media (hover: hover) {
-  body main .contact-us .submit-on:hover {
+  body main .contact-us .submit:hover {
     background-color: var(--hover);
     color: var(--second-color);
     border: none;
   }
 }
-body main .contact-us .submit-on:active {
+body main .contact-us .submit:active {
   transform: scale(1.1);
   border: none;
 }

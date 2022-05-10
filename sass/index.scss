@@ -4,6 +4,11 @@ body {
 	background-color: var(--bg-color);
 	@import "loader";
 	@import "header";
+	header {
+		nav {
+			box-shadow: none;
+		}
+	}
 	main {
 		background-color: var(--bg-color);
 		// BANNER ON TOP
@@ -11,15 +16,9 @@ body {
 			background-color: var(--second-color);
 			width: 100vw;
 			figure {
-				width: 100vw;
 				margin: 0;
-				padding: 20px 40px;
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-				column-gap: 60px;
-				img {
-					max-height: 300px;
-				}
+				max-height: 280px;
+				overflow: hidden;
 			}
 		}
 		// MANUAL GRID
@@ -35,7 +34,8 @@ body {
 				color: var(--third-color);
 				font-size: var(--medium);
 				margin: 0;
-				margin-top: 15px;
+				margin-top: 30px;
+				margin-bottom: 30px;
 			}
 			figure {
 				background-color: var(--second-color);
@@ -141,30 +141,25 @@ body {
 				margin-bottom: 5px;
 				border: 1px solid var(--third-color);
 			}
-			.submit-off {
+			.submit {
 				height: 40px;
 				margin-top: 15px;
 				border-radius: var(--radius);
-				background-color: var(--not-allowed);
-				color: var(--second-color);
-				cursor: not-allowed;
-				margin-bottom: 15px;
-			}
-			.submit-on {
 				background-color: var(--botton-bg);
 				color: var(--botton-text);
-				border: 1px solid var(--botton-text);
-				transition: background-color 300ms ease, transform 300ms linear;
 				cursor: pointer;
+
+				border: 1px solid var(--botton-text);
+				transition: transform 300ms linear;
 			}
 			@media (hover: hover) {
-				.submit-on:hover {
+				.submit:hover {
 					background-color: var(--hover);
 					color: var(--second-color);
 					border: none;
 				}
 			}
-			.submit-on:active {
+			.submit:active {
 				transform: scale(1.1);
 				border: none;
 			}

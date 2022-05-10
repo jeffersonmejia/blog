@@ -16,7 +16,6 @@ console.log($nav);
 const $formEl = {
 	$form: d.querySelector("form"),
 	$input: d.querySelectorAll(".input"),
-	$submit: d.querySelector("form .submit-off"),
 	$alert: {
 		$name: d.querySelector("form #alert-name"),
 		$lastname: d.querySelector("form #alert-lastname"),
@@ -61,7 +60,7 @@ const alerts = {
 $nav.$menu.addEventListener("click", () => {
 	$nav.$bar.classList.toggle("bar-on");
 });
-// Verify form before send to backend
+//! Verify form before send to backend
 $formEl.$form.addEventListener(
 	"keyup",
 	(e) => {
@@ -111,31 +110,22 @@ $formEl.$form.addEventListener(
 	},
 	true
 );
-//! Enable submit when there is not blank inputs
-$formEl.$input.forEach((el) => {
-	el.addEventListener("blur", () => {
-		//This could be improved
-		if (fill.name === true && fill.lastname === true && fill.topic === true) {
-			$formEl.$submit.classList.toggle("submit-on");
-		}
-	});
-});
-// Check if form was sent
+// *Check if form was sent
 $formEl.$form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	if (fill.name === true && fill.lastname === true && fill.topic === true) {
 		$formEl.$alert.$submit.classList.toggle("submit-send");
 		$formEl.$alert.$submit.innerHTML = alerts.submit.accepted;
+		$formEl.$form.reset();
 		fill.name = false;
 		fill.lastname = false;
 		fill.topic = false;
 		setTimeout(() => {
 			$formEl.$alert.$submit.innerHTML = "";
 			$formEl.$alert.$submit.classList.remove("submit-send");
-			$formEl.$form.reset();
-			$formEl.$submit.classList.remove("submit-on");
-		}, 3000);
+		}, 900);
 	} else {
+		$formEl.$alert.$submit.classList.remove("submit-send");
 		$formEl.$alert.$submit.innerHTML = alerts.submit.denied;
 	}
 });

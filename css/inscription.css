@@ -103,6 +103,7 @@ body header nav .menu {
   justify-self: flex-end;
   margin-right: 15px;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 body header nav .bar-off {
   display: none;
