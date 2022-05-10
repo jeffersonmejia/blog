@@ -1,65 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<!-- MAIN CONFIG -->
+		<!-- ! FIRST LOAD -->
+		<link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
+		<title>Blog | Inicio</title>
+		<!--! MAIN CONFIG -->
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!--SEO  -->
+		<!--! SEO  -->
 		<meta name="description" content="Jefferson Mejía: Blog Universitario" />
 		<meta name="keywords" content="Universitario, blog, Jefferson" />
 
-		<link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
-		<title>Blog | Inicio</title>
+		<!--! FONTS -->
 
-		<!-- FONTS -->
+		<!--* OPEN SANS -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
 			rel="stylesheet"
 		/>
-		<!--STYLES  -->
+		<!--! ICONS -->
+		<link href="https://css.gg/menu-round.css" rel="stylesheet" />
+		<!--! STYLES  -->
 		<link rel="stylesheet" href="./css/index.css" />
 	</head>
 
 	<body>
-		<!-- HEADER -->
+		<!--! HEADER -->
 		<header>
 			<nav>
 				<img src="./images/favicon.svg" width="40" />
-				<ul>
+				<ul class="bar-off">
 					<li><a href="#">Inicio</a></li>
 					<li><a href="#contact-us">Contacto</a></li>
 					<li><a href="#about">Acerca de</a></li>
 				</ul>
+				<i class="gg-menu-round menu"></i>
 			</nav>
 		</header>
-		<!-- MAIN -->
+		<!--! MAIN -->
 		<main>
-			<!-- LOADER TO PREVENT BUGS -->
+			<!--* LOADER TO PREVENT BUGS -->
 			<div class="loader" id="loader">
 				<div></div>
 			</div>
-			<!-- MAIN BANNER ON TOP -->
+			<!--* MAIN BANNER ON TOP -->
 			<section class="news">
 				<figure>
-					<img src="./images/vector-1.svg" width="300" />
-					<figcaption>Matriculas habilitadas a partir del 16 de abril</figcaption>
+					<img src="./images/banner-1.svg" width="300" />
+					<img src="./images/banner-2.svg" width="300" />
+					<img src="./images/banner-3.svg" width="300" />
 				</figure>
 			</section>
-			<!-- SYSTEMS MANUAL -->
+			<!--* SYSTEMS MANUAL -->
 			<section class="systems">
 				<h1>Sistemas académicos</h1>
-				<!-- REDIRECT -->
+				<!--* REDIRECT -->
 				<figure class="fig-unactive first-child">
 					<a href="./inscription.html"
 						><img src="./images/sg.svg" width="300" />
 						<figcaption>Sistema de inscripciones</figcaption></a
 					>
 				</figure>
-				<!-- REDIRECT -->
+				<!--* REDIRECT -->
 				<figure class="fig-unactive">
 					<a href="./manage.html">
 						<img src="./images/sm.svg" width="300" />
@@ -67,7 +73,7 @@
 					>
 				</figure>
 			</section>
-			<!-- EXTRA -->
+			<!--* EXTRA -->
 			<section class="about">
 				<p>
 					<i
@@ -76,24 +82,26 @@
 					>
 				</p>
 			</section>
-			<!-- TO SEND MAILS-->
+			<!--* TO SEND MAILS-->
 			<form class="contact-us" id="contact-us">
 				<h3>Contáctanos</h3>
-				<label for="">Nombre</label>
+				<label for="name">Nombre</label>
 				<input
 					type="text"
 					placeholder="Ingresa tus dos nombres"
+					autocomplete="off"
 					class="input"
 					id="name"
 				/>
 				<h5 id="alert-name"></h5>
 
-				<label for="">Apellido</label>
+				<label for="lastname">Apellido</label>
 				<input
 					type="text"
 					placeholder="Ingresa tus dos apellidos"
 					class="input"
 					id="lastname"
+					autocomplete="off"
 				/>
 				<h5 id="alert-lastname"></h5>
 
@@ -104,6 +112,7 @@
 					placeholder="Redacta de manera breve el asunto"
 					class="input"
 					id="topic"
+					autocomplete="off"
 				></textarea>
 				<h5 id="alert-topic"></h5>
 
@@ -112,12 +121,12 @@
 			</form>
 		</main>
 		<footer>
-			<!-- CREDITS AND VERSION -->
+			<!--! CREDITS AND VERSION -->
 			<p>Sitio desarrollado por Jefferson Mejía | 2022</p>
 			<p>Actualmente en la versión 2.0</p>
 			<p>Feedback: jeffersonmejiach01@gmail.com</p>
 		</footer>
-		<!-- SCRIPT -->
+		<!--! SCRIPT -->
 		<script src="./js/index.js" type="module"></script>
 	</body>
 </html>

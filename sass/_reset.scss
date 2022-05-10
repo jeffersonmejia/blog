@@ -1,5 +1,6 @@
 :root {
-	--main-font: "Poppins", sans-serif;
+	--main-font: "Open Sans", sans-serif;
+
 	--font-size: 16px;
 	--small: 0.7em;
 	--normal: 0.8em;
@@ -8,11 +9,13 @@
 
 	--main-color: #000e5c;
 	--second-color: #fff;
+	--third-color: #8f8f8f;
+	--bg-color: #eeeeee;
 	--botton-bg: var(--second-color);
 	--botton-text: #3554ff;
 	--hover: #00137e;
-	--active: #7b8fff;
-	--not-allowed: rgb(150, 150, 150);
+	--active: #001277;
+	--not-allowed: rgb(87, 87, 87);
 	--alert: rgb(255, 55, 55);
 	--sucessful: rgb(0, 163, 43);
 	--transparent: rgb(255, 255, 255, 0.5);

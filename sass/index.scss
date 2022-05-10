@@ -1,28 +1,24 @@
 @import "reset";
 
 body {
+	background-color: var(--bg-color);
 	@import "loader";
 	@import "header";
 	main {
-		width: 100%;
+		background-color: var(--bg-color);
 		// BANNER ON TOP
 		.news {
+			background-color: var(--second-color);
+			width: 100vw;
 			figure {
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
+				width: 100vw;
+				margin: 0;
+				padding: 20px 40px;
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+				column-gap: 60px;
 				img {
-					max-width: 320px;
-					margin: auto;
-				}
-				figcaption {
-					width: 100%;
-					padding-bottom: 15px;
-					text-align: center;
-					font-size: var(--large);
-					font-weight: 600;
-					color: var(--main-color);
-					border-bottom: var(--border);
+					max-height: 300px;
 				}
 			}
 		}
@@ -36,10 +32,13 @@ body {
 			padding-bottom: 20px;
 			h1 {
 				text-align: center;
-				color: var(--main-color);
+				color: var(--third-color);
 				font-size: var(--medium);
+				margin: 0;
+				margin-top: 15px;
 			}
 			figure {
+				background-color: var(--second-color);
 				max-width: 288px;
 				border-radius: var(--radius);
 				padding: 15px;
@@ -52,7 +51,7 @@ body {
 				color: var(--main-color);
 				a {
 					text-decoration: none;
-					color: var(--main-color);
+					color: var(--third-color);
 					figcaption {
 						width: 100%;
 						text-align: center;
@@ -74,10 +73,12 @@ body {
 			p {
 				text-align: center;
 				font-size: var(--normal);
+				color: var(--third-color);
 			}
 		}
 		// FORM CLASS TO ACTIVE IN JS
 		.contact-us {
+			background-color: var(--second-color);
 			max-width: 348px;
 			width: 80%;
 			margin: auto;
@@ -88,23 +89,33 @@ body {
 			flex-wrap: wrap;
 			font-size: var(--normal);
 			box-shadow: 1px 1px 10px #bdbdbd;
+			color: var(--third-color);
 			h3 {
 				text-align: center;
 				font-weight: 300;
+				color: var(--third-color);
 			}
 			label {
 				margin-bottom: 5px;
 				margin-top: 10px;
+				color: var(--main-color);
 			}
 			input {
 				padding-bottom: 5px;
 				width: 100%;
 				border: none;
-				border-bottom: var(--border);
 				margin-bottom: 5px;
 			}
-			input:focus {
+			input[type="text"] {
+				border-bottom: 1px solid var(--third-color);
+			}
+			input[type="text"]:focus {
 				border-bottom: 1px solid var(--active);
+			}
+
+			input::placeholder,
+			textarea::placeholder {
+				color: var(--third-color);
 			}
 			input,
 			textarea {
@@ -128,6 +139,7 @@ body {
 				font-family: var(--main-font);
 				font-size: var(--normal);
 				margin-bottom: 5px;
+				border: 1px solid var(--third-color);
 			}
 			.submit-off {
 				height: 40px;
