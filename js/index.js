@@ -1,3 +1,7 @@
+//! danger
+//* important
+//todo: warning
+//?suggest
 import { startLoader } from "./loader.js";
 startLoader();
 
